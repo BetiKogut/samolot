@@ -16,7 +16,7 @@ void testuj()
 
 	cout << endl << "Testowanie operatorow:" << endl;
 
-	cout << "Operator + :" << endl;
+	cout << "Operator + napisow:" << endl;
 	cout << "Imie: " << pasazer1->zwrocimie();
 	cout << endl << "Nazwisko: " << pasazer1->zwrocnazwisko();
 	cout << endl << "Cala nazwa: ";

@@ -79,3 +79,9 @@ $RECYCLE.BIN/
 *.lnk
 
 /Debug
+
+*.db
+*.opendb
+
+/samolot/x64
+/x64
