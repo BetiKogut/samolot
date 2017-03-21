@@ -10,11 +10,11 @@ Pasazerowie::Pasazerowie()
 {
 #ifdef _DEBUG  
 	cout << "Wywolano konstruktor Pasazerowie" << endl;
+
+#endif
 	imie = "Adam";
 	nazwisko = "Abacki";
 	nadbagaz = 1;
-
-#endif
 }
 
 string Pasazerowie::zwrocimie()

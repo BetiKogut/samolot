@@ -21,10 +21,16 @@ Samolot::Samolot()
 
 Samolot::Samolot(Samolot& samolot)
 {
+	cout << "Wywolano kostruktor kopiujacy samolot" << endl;
 	liczba_obiektow++;
 	numer = samolot.numer;
 	ilosc_miejsc = samolot.ilosc_miejsc;
-	pasazerowie = new Pasazerowie(*samolot.pasazerowie);
+	pasazerowie = new Pasazerowie[4];
+	for (int i = 0; i < 4; i++)
+	{
+		pasazerowie[i] = samolot.pasazerowie[i];
+	}
+
 	daneSamolotu = samolot.daneSamolotu;
 	zaloga = samolot.zaloga;
 
@@ -119,4 +125,5 @@ Samolot::~Samolot()
 	cout << "Wywolano destruktor ~Samolot" << endl;
 #endif
 	liczba_obiektow--;
+	delete[]pasazerowie;
 }

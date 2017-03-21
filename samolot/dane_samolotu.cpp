@@ -10,9 +10,10 @@ DaneSamolotu :: DaneSamolotu()
 {
 #ifdef _DEBUG  
 	cout << "Wywolano konstruktor DaneSamolotu" << endl;
+#endif
+
 	start = "Warszawa";
 	cel = "Berlin";
-#endif
 }
 
 DaneSamolotu & DaneSamolotu :: operator = (const DaneSamolotu &dane)

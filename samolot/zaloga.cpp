@@ -10,8 +10,8 @@ Zaloga::Zaloga()
 {
 #ifdef _DEBUG  
 	cout << "Wywolano konstruktor Zaloga" << endl;
-	pilot_id = 123;
 #endif
+	pilot_id = 123;
 }
 
 bool Zaloga :: operator == (const Zaloga &zaloga1)

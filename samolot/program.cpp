@@ -13,6 +13,7 @@ void testuj()
 	pasazer1 = new Pasazerowie();
 	Zaloga zaloga1, zaloga2;
 	DaneSamolotu dane1, dane2;
+	Samolot samolot3(samolot2);
 
 	cout << endl << "Testowanie operatorow:" << endl;
 
