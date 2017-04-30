@@ -111,15 +111,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dane_samolotu.h" />
+    <ClInclude Include="helikopter.h" />
     <ClInclude Include="pasazerowie.h" />
+    <ClInclude Include="samochod.h" />
     <ClInclude Include="samolot.h" />
+    <ClInclude Include="srodek_transportu.h" />
     <ClInclude Include="zaloga.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dane_samolotu.cpp" />
     <ClCompile Include="pasazerowie.cpp" />
     <ClCompile Include="program.cpp" />
+    <ClCompile Include="samochod.cpp" />
     <ClCompile Include="samolot.cpp" />
+    <ClCompile Include="helikopter.cpp" />
+    <ClCompile Include="srodek_transportu.cpp" />
     <ClCompile Include="zaloga.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

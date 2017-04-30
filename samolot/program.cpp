@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "srodek_transportu.h"
 #include "samolot.h"
 
 using namespace std;
@@ -70,6 +71,24 @@ void testuj()
 	cout << endl;
 	dane1 = dane1;
 
+	cout << endl << endl << "Operator = dla Samolot:" << endl << "dane samolotu 1: ";
+	samolot1.zwroc_iloscmiejsc();
+	cout << endl;
+	cout << samolot1[2].zwrocimie();
+	cout << endl << "dane samolotu 2: ";
+	samolot2.zwroc_iloscmiejsc();
+	cout << endl;
+	cout << samolot2[2].zwrocimie();
+	samolot1 = samolot2;
+	cout << endl << "Po przypisaniu: " << endl << "dane samolotu 1: ";
+	samolot1.zwroc_iloscmiejsc();
+	cout << endl;
+	cout << samolot1[2].zwrocimie();
+	cout << endl << "dane samolotu 2: ";
+	samolot2.zwroc_iloscmiejsc();
+	cout << endl;
+	cout << samolot2[2].zwrocimie();
+
 	cout << endl << endl << "Operator [] :" << endl;
 	cout << samolot1[2].zwrocimie();
 	samolot1[2].zmienimie("Marek");
@@ -92,23 +111,23 @@ void testuj()
 
 	cout << endl << endl << "Operator << :" << endl;
 	cout << samolot1;
-	
+
 	Samolot::statycznametoda();
 
 	cout << endl << endl;
 
 
 	delete  pasazer1;
-	
+
 }
 
-int main() 
+int main()
 {
-	int a,przycisk=0;
+	int a, przycisk = 0;
 	string imie, nazwisko;
 
 #ifdef _DEBUG
-	
+
 	testuj();
 
 #endif

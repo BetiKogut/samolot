@@ -37,6 +37,29 @@ Samolot::Samolot(Samolot& samolot)
 
 
 }
+Samolot& Samolot :: operator = (const Samolot &samolot)
+{
+	if (this != &samolot)
+	{
+		delete[]pasazerowie;
+		numer = samolot.numer;
+		ilosc_miejsc = samolot.ilosc_miejsc;
+		pasazerowie = new Pasazerowie[4];
+		for (int i = 0; i < 4; i++)
+		{
+			pasazerowie[i] = samolot.pasazerowie[i];
+		}
+
+		daneSamolotu = samolot.daneSamolotu;
+		zaloga = samolot.zaloga;
+
+		return *this;
+	}
+	else
+		cout << "Nie mozna uzyc operatora = do tych samych danych!";
+
+}
+
 
 
 void Samolot::statycznametoda()
@@ -44,10 +67,10 @@ void Samolot::statycznametoda()
 	cout << endl << "Liczba stworzonych obiektow: " << liczba_obiektow << endl;
 }
 
-ostream& operator << (ostream& out, const Samolot& samolot) 
-{ 
-	cout<<samolot.ilosc_miejsc<<endl;
-	return out; 
+ostream& operator << (ostream& out, const Samolot& samolot)
+{
+	cout << samolot.ilosc_miejsc << endl;
+	return out;
 }
 
 
@@ -94,22 +117,22 @@ Samolot & Samolot :: operator++(int)
 
 Samolot & Samolot :: operator--(int)
 {
-	if(ilosc_miejsc != 0)
-	{ 
+	if (ilosc_miejsc != 0)
+	{
 		ilosc_miejsc--;
 		return *this;
 	}
 	else
 	{
-		cout << endl <<"!Nie mozna bardziej zmnejszyc ilosci miejsc!";
+		cout << endl << "!Nie mozna bardziej zmnejszyc ilosci miejsc!";
 		return *this;
 	}
-	
+
 }
 
 Pasazerowie& Samolot::operator[](int pozycja)
 {
-	
+
 	return pasazerowie[pozycja];
 }
 

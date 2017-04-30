@@ -11,7 +11,7 @@ private:
 	string nazwisko;
 	int klasa;
 	bool nadbagaz;
-	
+
 public:
 	Pasazerowie(); //konstruktor
 	~Pasazerowie(); //destruktor
