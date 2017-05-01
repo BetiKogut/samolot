@@ -31,7 +31,11 @@ public:
 	void zmienilosc(int nowailosc);
 	static void statycznametoda();
 
-	friend ostream& operator << (ostream& out, const Samolot& samolot);
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, Samolot& samolot);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, Samolot &samolot);
 
 	bool operator > (const Samolot &samolot);
 	bool operator < (const Samolot &samolot);

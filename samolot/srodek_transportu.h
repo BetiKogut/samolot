@@ -6,9 +6,6 @@ using namespace std;
 
 ///Klasa abstrakcyjna
 class Srodek_transportu {
-private:
-	///pole przechowuj¹ce typ urz¹dzenia
-	string typ_urzadzenia;
 
 protected:
 	int ilosc_miejsc;

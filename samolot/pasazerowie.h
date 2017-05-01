@@ -4,6 +4,7 @@
 #include <fstream>
 
 using std::string;
+using namespace std;
 
 class Pasazerowie {
 private:
@@ -21,6 +22,13 @@ public:
 	void zmienimie(string noweimie);
 	void zwrocnadbagaz();
 	void operator !();
+
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, Pasazerowie &pasazerowie);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, Pasazerowie &pasazerowie);
+
 
 
 };

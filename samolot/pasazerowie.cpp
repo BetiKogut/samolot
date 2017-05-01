@@ -51,6 +51,23 @@ void Pasazerowie::operator!()
 	else nadbagaz = 1;
 }
 
+ostream& operator << (ostream& out, Pasazerowie &pasazerowie)
+{
+	out << pasazerowie.imie;
+	return out;
+}
+
+istream& operator >> (istream& s, Pasazerowie &pasazerowie)
+{
+	cout << "Wpisz imie pasazera: ";
+	s >> pasazerowie.imie;
+	cout << endl << "Wpisz nazwisko pasazera: ";
+	s >> pasazerowie.nazwisko;
+	cout << endl;
+
+	return s;
+}
+
 
 
 //destruktor

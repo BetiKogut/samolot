@@ -42,6 +42,23 @@ void DaneSamolotu::zwrocdane()
 	cout << "Cel: " << cel << endl;
 }
 
+ostream& operator << (ostream& out, DaneSamolotu& dane)
+{
+	out << dane.start << " " << dane.cel << endl;
+	return out;
+}
+
+istream& operator >> (istream& s, DaneSamolotu &dane)
+{
+	cout << "Wpisz start lotu: ";
+	s >> dane.start;
+	cout << endl << "Wpisz cel lotu: ";
+	s >> dane.cel;
+	cout << endl;
+
+	return s;
+}
+
 //destruktor
 DaneSamolotu::~DaneSamolotu()
 {

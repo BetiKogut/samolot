@@ -4,6 +4,7 @@
 #include <fstream>
 
 using std::string;
+using namespace std;
 
 class DaneSamolotu {
 private:
@@ -17,5 +18,12 @@ public:
 	void zmiendane(string nowystart, string nowycel);
 
 	DaneSamolotu & operator = (const DaneSamolotu &dane);
+
+
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, DaneSamolotu& dane);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, DaneSamolotu &dane);
 
 };

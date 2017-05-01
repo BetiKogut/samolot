@@ -4,6 +4,7 @@
 #include <fstream>
 
 using std::string;
+using namespace std;
 
 class Zaloga {
 private:
@@ -14,5 +15,11 @@ public:
 	~Zaloga(); //destruktor
 	void zmienid(int noweid);
 	bool operator == (const Zaloga &zaloga1);
+
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, Zaloga& zaloga);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, Zaloga &zaloga);
 
 };

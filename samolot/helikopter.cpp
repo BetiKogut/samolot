@@ -18,3 +18,15 @@ Helikopter :: ~Helikopter()
 	cout << "Wywolano destruktor ~Helikopter" << endl;
 #endif
 }
+
+ostream& operator << (ostream& out, Helikopter& helikopter)
+{
+	out << helikopter.numer << endl;
+	return out;
+}
+
+istream& operator >> (istream& s, Helikopter &helikopter)
+{
+	s >> helikopter.numer;
+	return s;
+}

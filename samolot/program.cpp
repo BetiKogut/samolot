@@ -111,6 +111,8 @@ void testuj()
 
 	cout << endl << endl << "Operator << :" << endl;
 	cout << samolot1;
+	cin >> samolot1;
+	cout << samolot1;
 
 	Samolot::statycznametoda();
 

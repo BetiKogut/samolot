@@ -14,4 +14,10 @@ public:
 	Helikopter();
 	~Helikopter();
 
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, Helikopter& helikopter);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, Helikopter &helikopter);
+
 };

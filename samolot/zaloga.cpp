@@ -26,6 +26,19 @@ void Zaloga::zmienid(int noweid)
 	pilot_id = noweid;
 }
 
+ostream& operator << (ostream& out, Zaloga& zaloga)
+{
+	out << zaloga.pilot_id << endl;
+	return out;
+}
+
+istream& operator >> (istream& s, Zaloga &zaloga)
+{
+	cout << "Wpisz numer id pilota: ";
+	s >> zaloga.pilot_id;
+	return s;
+}
+
 //destruktor
 Zaloga::~Zaloga()
 {

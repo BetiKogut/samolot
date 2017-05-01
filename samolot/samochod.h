@@ -14,4 +14,10 @@ public:
 	Samochod();
 	~Samochod();
 
+	///Operator strumieniowy <<
+	friend ostream& operator << (ostream& out, Samochod& samochod);
+
+	///Operator strumieniowy >>
+	friend istream& operator >> (istream &s, Samochod &samochod);
+
 };

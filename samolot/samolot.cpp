@@ -67,12 +67,18 @@ void Samolot::statycznametoda()
 	cout << endl << "Liczba stworzonych obiektow: " << liczba_obiektow << endl;
 }
 
-ostream& operator << (ostream& out, const Samolot& samolot)
+ostream& operator << (ostream& out, Samolot& samolot)
 {
-	cout << samolot.ilosc_miejsc << endl;
+	out << samolot.numer << endl;
 	return out;
 }
 
+istream& operator >> (istream& s, Samolot &samolot) 
+{
+	cout << "Wpisz numer samolotu: ";
+	s >> samolot.numer;
+	return s;
+}
 
 void zmienilosc(Samolot & samolot, int nowailosc)
 {

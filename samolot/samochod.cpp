@@ -18,3 +18,15 @@ Samochod :: ~Samochod()
 	cout << "Wywolano destruktor ~Samochod" << endl;
 #endif
 }
+
+ostream& operator << (ostream& out, Samochod& samochod)
+{
+	out << samochod.numer << endl;
+	return out;
+}
+
+istream& operator >> (istream& s, Samochod &samochod)
+{
+	s >> samochod.numer;
+	return s;
+}
