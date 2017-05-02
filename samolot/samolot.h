@@ -6,6 +6,7 @@
 #include "zaloga.h"
 #include "dane_samolotu.h"
 #include "srodek_transportu.h"
+#include <vector>
 
 using std::string;
 using namespace std;
@@ -13,17 +14,19 @@ using namespace std;
 ///Klasa Samolot, dziedziczy po klasie Srodek_transportu
 class Samolot : public Srodek_transportu {
 private:
-	Pasazerowie *pasazerowie;
+	//Pasazerowie pasazerowie;
+//	vector <Pasazerowie> wektor_pasazerow;
 	Zaloga zaloga;
 	DaneSamolotu daneSamolotu;
 	static int liczba_obiektow;
 
 protected:
 	float max_wysokosc;
+	vector <Pasazerowie> wektor_pasazerow;
 
 public:
-
-	Samolot(); //konstruktor
+	Samolot();
+	Samolot(int miejsca, int ilosc_osob); //konstruktor z parametrem
 	Samolot(Samolot &samolot);//konstruktor kopiujacy
 	~Samolot(); //destruktor
 	friend void zmienilosc(Samolot &, int nowailosc);
@@ -41,9 +44,9 @@ public:
 	bool operator < (const Samolot &samolot);
 	int operator + (const Samolot &samolot);
 	operator int() const;
-	Samolot & operator ++ (int);
-	Samolot & operator -- (int);
+	Samolot& operator ++ (int);
+	Samolot& operator -- (int);
 	Pasazerowie& operator [](int pozycja);
-	Samolot & operator = (const Samolot &samolot);
+	Samolot& operator = (const Samolot &samolot);
 
 };

@@ -4,12 +4,15 @@
 #include "helikopter.h"
 
 using namespace std;
+using std::string;
 
-Helikopter :: Helikopter() {
+Helikopter::Helikopter() 
+{
 #ifdef _DEBUG  
 	cout << "Wywolano domyslny konstruktor Helikopter" << endl;
 #endif
 	ilosc_smigiel = 2;
+	
 }
 
 Helikopter :: ~Helikopter()

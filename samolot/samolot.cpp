@@ -1,22 +1,47 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
 #include "samolot.h"
 
 using namespace std;
 int Samolot::liczba_obiektow = 0;
 
 //konstruktor
+
 Samolot::Samolot()
 {
 #ifdef _DEBUG  
 	cout << "Wywolano konstruktor Samolot" << endl;
 #endif
 	liczba_obiektow++;
-	numer = 123456;
-	ilosc_miejsc = 150;
-	pasazerowie = NULL;
-	pasazerowie = new Pasazerowie[4];
+	numer = 0;
+	ilosc_miejsc = 0;
+	max_wysokosc = 0;
+
+}
+
+Samolot::Samolot(int miejsca, int ilosc_osob)
+{
+#ifdef _DEBUG  
+	cout << "Wywolano konstruktor zparametrem Samolot" << endl;
+#endif
+	liczba_obiektow++;
+	if (ilosc_osob <= miejsca)
+	{
+		numer = 123456;
+		ilosc_miejsc = 150;
+		max_wysokosc = 10;
+
+		for (int i = 0; i < ilosc_osob; i++)
+		{
+			Pasazerowie pasazer;
+			wektor_pasazerow.push_back(pasazer);
+		}
+	}
+	else cout << "!Za duzo osob!" << endl;
+
+	
 }
 
 Samolot::Samolot(Samolot& samolot)
@@ -25,12 +50,7 @@ Samolot::Samolot(Samolot& samolot)
 	liczba_obiektow++;
 	numer = samolot.numer;
 	ilosc_miejsc = samolot.ilosc_miejsc;
-	pasazerowie = new Pasazerowie[4];
-	for (int i = 0; i < 4; i++)
-	{
-		pasazerowie[i] = samolot.pasazerowie[i];
-	}
-
+	wektor_pasazerow = samolot.wektor_pasazerow;
 	daneSamolotu = samolot.daneSamolotu;
 	zaloga = samolot.zaloga;
 
@@ -41,15 +61,16 @@ Samolot& Samolot :: operator = (const Samolot &samolot)
 {
 	if (this != &samolot)
 	{
-		delete[]pasazerowie;
+		//delete[]pasazerowie;
 		numer = samolot.numer;
 		ilosc_miejsc = samolot.ilosc_miejsc;
-		pasazerowie = new Pasazerowie[4];
+		wektor_pasazerow = samolot.wektor_pasazerow;
+		/*pasazerowie = new Pasazerowie[4];
 		for (int i = 0; i < 4; i++)
 		{
 			pasazerowie[i] = samolot.pasazerowie[i];
 		}
-
+		*/
 		daneSamolotu = samolot.daneSamolotu;
 		zaloga = samolot.zaloga;
 
@@ -139,7 +160,7 @@ Samolot & Samolot :: operator--(int)
 Pasazerowie& Samolot::operator[](int pozycja)
 {
 
-	return pasazerowie[pozycja];
+	return wektor_pasazerow[pozycja];
 }
 
 Samolot::operator int() const
@@ -154,5 +175,6 @@ Samolot::~Samolot()
 	cout << "Wywolano destruktor ~Samolot" << endl;
 #endif
 	liczba_obiektow--;
-	delete[]pasazerowie;
+	//delete[]pasazerowie;
+
 }
