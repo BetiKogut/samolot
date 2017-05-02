@@ -30,7 +30,7 @@ Samolot::Samolot(int miejsca, int ilosc_osob)
 	if (ilosc_osob <= miejsca)
 	{
 		numer = 123456;
-		ilosc_miejsc = 150;
+		ilosc_miejsc=miejsca;
 		max_wysokosc = 10;
 
 		for (int i = 0; i < ilosc_osob; i++)
@@ -90,7 +90,7 @@ void Samolot::statycznametoda()
 
 ostream& operator << (ostream& out, Samolot& samolot)
 {
-	out << samolot.numer << endl;
+	out << "Numer samolotu: " << samolot.numer << endl << "Ilosc miejsc: " << samolot.ilosc_miejsc << endl << "Maksymalna wysokosc: " << samolot.max_wysokosc << endl;
 	return out;
 }
 
@@ -166,6 +166,16 @@ Pasazerowie& Samolot::operator[](int pozycja)
 Samolot::operator int() const
 {
 	return ilosc_miejsc;
+}
+
+void Samolot::zapisz() {
+#ifdef _DEBUG  
+	cout << "Zapisano obiekt Samolot" << endl;
+#endif
+	ofstream plik("samolot.txt");
+	plik << *this;
+	plik.close();
+
 }
 
 //destruktor

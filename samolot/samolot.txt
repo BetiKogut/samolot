@@ -1,0 +1,3 @@
+Numer samolotu: 123456
+Ilosc miejsc: 20
+Maksymalna wysokosc: 10

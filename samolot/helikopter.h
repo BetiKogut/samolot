@@ -12,7 +12,10 @@ protected:
 
 public:
 	Helikopter();
+	Helikopter(int miejsca, int ilosc_osob, int max_wys);
 	~Helikopter();
+
+	void zapisz();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Helikopter& helikopter);

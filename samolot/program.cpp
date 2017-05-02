@@ -2,6 +2,8 @@
 #include <string>
 #include "srodek_transportu.h"
 #include "samolot.h"
+#include "helikopter.h"
+#include "samochod.h"
 #include <vector>
 
 using namespace std;
@@ -130,16 +132,20 @@ int main()
 	int a, przycisk = 0;
 	int opcja=0;
 	string imie, nazwisko;
+	Samolot sam1(20,15);
+	Helikopter heli1(15,5,12);
+	Samochod samochod1;
+	system("cls");
 
 #ifdef _DEBUG
 
 	do 
-	{	
+	{
 		cout << endl << endl << "~~~~Menu programu~~~~" << endl << endl;
 		cout << "[0]zamknij program" << endl;
 		cout << "[1]Testy podstawowe klas" << endl;
-		cout << "[2]" << endl;
-		cout << "[3]" << endl;
+		cout << "[2]" "Testy zapisu do pliku" << endl;
+		cout << "[3]" "Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
 		cout << "[4]" << endl;
 		cin >> opcja;
 
@@ -154,10 +160,16 @@ int main()
 
 		case 2:
 			cout << "wybrano 2" << endl;
+			sam1.zapisz();
+			heli1.zapisz();
+			samochod1.zapisz();
 			break;
 
 		case 3:
-			cout << "wybrano 3";
+			Srodek_transportu *srodek;
+
+			srodek = new Helikopter();
+			delete srodek;
 			break;
 
 		case 4:

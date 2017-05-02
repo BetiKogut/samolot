@@ -34,6 +34,9 @@ public:
 	void zmienilosc(int nowailosc);
 	static void statycznametoda();
 
+	void zapisz();
+
+
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samolot& samolot);
 

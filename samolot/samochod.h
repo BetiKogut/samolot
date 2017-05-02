@@ -14,6 +14,8 @@ public:
 	Samochod();
 	~Samochod();
 
+	void zapisz();
+
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samochod& samochod);
 
