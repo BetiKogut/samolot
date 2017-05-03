@@ -90,7 +90,7 @@ void Samolot::statycznametoda()
 
 ostream& operator << (ostream& out, Samolot& samolot)
 {
-	out << "Numer samolotu: " << samolot.numer << endl << "Ilosc miejsc: " << samolot.ilosc_miejsc << endl << "Maksymalna wysokosc: " << samolot.max_wysokosc << endl;
+	out << "Maksymalna wysokosc: " << samolot.max_wysokosc << endl;
 	return out;
 }
 
@@ -168,11 +168,14 @@ Samolot::operator int() const
 	return ilosc_miejsc;
 }
 
-void Samolot::zapisz() {
+void Samolot::zapisz_samolot(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Zapisano obiekt Samolot" << endl;
 #endif
-	ofstream plik("samolot.txt");
+	(*this ).zapisz_srodek(nazwa);
+	fstream plik;
+	plik.open(nazwa);
+	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
 

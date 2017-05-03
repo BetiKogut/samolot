@@ -34,7 +34,7 @@ public:
 	void zmienilosc(int nowailosc);
 	static void statycznametoda();
 
-	void zapisz();
+	virtual void zapisz_samolot(string nazwa);
 
 
 	///Operator strumieniowy <<

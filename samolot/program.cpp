@@ -160,9 +160,9 @@ int main()
 
 		case 2:
 			cout << "wybrano 2" << endl;
-			sam1.zapisz();
-			heli1.zapisz();
-			samochod1.zapisz();
+			sam1.zapisz_samolot("samolot.txt");
+			heli1.zapisz_helikopter("helikopter.txt");
+			samochod1.zapisz_samochod("samochod.txt");
 			break;
 
 		case 3:

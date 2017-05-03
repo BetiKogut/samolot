@@ -40,20 +40,22 @@ Helikopter::Helikopter(int miejsca, int ilosc_osob, int max_wys)
 
 }
 
-void Helikopter::zapisz() {
+void Helikopter::zapisz_helikopter(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Zapisano obiekt Helikopter" << endl;
 #endif
-	ofstream plik("helikopter.txt");
+	(*this).zapisz_samolot(nazwa);
+	fstream plik;
+	plik.open(nazwa);
+	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
-
 }
 
 
 ostream& operator << (ostream& out, Helikopter& helikopter)
 {
-	out << "Numer samolotu: " << helikopter.numer << endl << "Ilosc miejsc: " << helikopter.ilosc_miejsc << endl << "Maksymalna wysokosc: " << helikopter.max_wysokosc << endl << "Ilosc smigiel: " << helikopter.ilosc_smigiel << endl;
+	out << "Ilosc smigiel: " << helikopter.ilosc_smigiel << endl;
 	return out;
 }
 

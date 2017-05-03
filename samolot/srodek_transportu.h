@@ -18,6 +18,7 @@ public:
 	///Destruktor wirtualny
 	virtual ~Srodek_transportu();
 
+
 	///Procedura wirtualna
 	//virtual void wyswietlobiekt(); = 0;
 

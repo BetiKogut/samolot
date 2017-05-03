@@ -1,4 +1,4 @@
-Numer samolotu: 123456
+Numer: 123456
 Ilosc miejsc: 15
 Maksymalna wysokosc: 12
 Ilosc smigiel: 2

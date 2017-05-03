@@ -17,7 +17,7 @@ Samochod::Samochod() {
 
 ostream& operator << (ostream& out, Samochod& samochod)
 {
-	out << "Numer samolotu: " << samochod.numer << endl << "Ilosc miejsc: " << samochod.ilosc_miejsc << endl << "Przebieg: " << samochod.przebieg << endl;
+	out << "Przebieg: " << samochod.przebieg << endl;
 	return out;
 }
 
@@ -27,11 +27,14 @@ istream& operator >> (istream& s, Samochod &samochod)
 	return s;
 }
 
-void Samochod::zapisz() {
+void Samochod::zapisz_samochod(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Zapisano obiekt Samochod" << endl;
 #endif
-	ofstream plik("samochod.txt");
+	(*this).zapisz_srodek(nazwa);
+	fstream plik;
+	plik.open(nazwa);
+	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
 

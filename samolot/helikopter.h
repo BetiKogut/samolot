@@ -15,7 +15,7 @@ public:
 	Helikopter(int miejsca, int ilosc_osob, int max_wys);
 	~Helikopter();
 
-	void zapisz();
+	virtual void zapisz_helikopter(string nazwa);
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Helikopter& helikopter);
