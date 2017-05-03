@@ -61,16 +61,9 @@ Samolot& Samolot :: operator = (const Samolot &samolot)
 {
 	if (this != &samolot)
 	{
-		//delete[]pasazerowie;
 		numer = samolot.numer;
 		ilosc_miejsc = samolot.ilosc_miejsc;
 		wektor_pasazerow = samolot.wektor_pasazerow;
-		/*pasazerowie = new Pasazerowie[4];
-		for (int i = 0; i < 4; i++)
-		{
-			pasazerowie[i] = samolot.pasazerowie[i];
-		}
-		*/
 		daneSamolotu = samolot.daneSamolotu;
 		zaloga = samolot.zaloga;
 
@@ -90,14 +83,13 @@ void Samolot::statycznametoda()
 
 ostream& operator << (ostream& out, Samolot& samolot)
 {
-	out << "Maksymalna wysokosc: " << samolot.max_wysokosc << endl;
+	out << samolot.max_wysokosc << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Samolot &samolot) 
 {
-	cout << "Wpisz numer samolotu: ";
-	s >> samolot.numer;
+	s >> samolot.max_wysokosc;
 	return s;
 }
 
@@ -179,6 +171,27 @@ void Samolot::zapisz_samolot(string nazwa) {
 	plik << *this;
 	plik.close();
 
+}
+
+void Samolot::wczytaj_samolot(string nazwa) {
+#ifdef _DEBUG  
+	cout << "Wczytano obiekt Samolot" << endl;
+#endif
+	string smietnik;
+	ifstream plik(nazwa);
+	for (int i = 0; i < 2; i++)
+	{
+		getline(plik, smietnik);
+	}
+	plik >> *this;
+	plik.close();
+
+}
+
+void Samolot::wypisz_samolot()
+{
+	(*this).wypisz_srodek();
+	cout << max_wysokosc << endl;
 }
 
 //destruktor

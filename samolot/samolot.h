@@ -14,8 +14,6 @@ using namespace std;
 ///Klasa Samolot, dziedziczy po klasie Srodek_transportu
 class Samolot : public Srodek_transportu {
 private:
-	//Pasazerowie pasazerowie;
-//	vector <Pasazerowie> wektor_pasazerow;
 	Zaloga zaloga;
 	DaneSamolotu daneSamolotu;
 	static int liczba_obiektow;
@@ -35,6 +33,9 @@ public:
 	static void statycznametoda();
 
 	virtual void zapisz_samolot(string nazwa);
+	virtual void wczytaj_samolot(string nazwa);
+
+	virtual void wypisz_samolot();
 
 
 	///Operator strumieniowy <<

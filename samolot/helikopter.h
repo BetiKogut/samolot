@@ -12,10 +12,13 @@ protected:
 
 public:
 	Helikopter();
-	Helikopter(int miejsca, int ilosc_osob, int max_wys);
+	Helikopter(int miejsca, int ilosc_osob, float max_wys);
 	~Helikopter();
 
 	virtual void zapisz_helikopter(string nazwa);
+	virtual void wczytaj_helikopter(string nazwa);
+
+	void wypisz_helikopter();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Helikopter& helikopter);

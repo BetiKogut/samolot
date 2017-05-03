@@ -1,3 +1,3 @@
-Numer: 2345
-Ilosc miejsc: 5
-Przebieg: 100000
+2345
+5
+100000

@@ -17,7 +17,7 @@ Helikopter::Helikopter()
 	
 }
 
-Helikopter::Helikopter(int miejsca, int ilosc_osob, int max_wys)
+Helikopter::Helikopter(int miejsca, int ilosc_osob, float max_wys)
 {
 #ifdef _DEBUG  
 	cout << "Wywolano konstruktor zparametrem Helikopter" << endl;
@@ -52,16 +52,37 @@ void Helikopter::zapisz_helikopter(string nazwa) {
 	plik.close();
 }
 
+void Helikopter::wczytaj_helikopter(string nazwa) {
+#ifdef _DEBUG  
+	cout << "Wczytano obiekt Helikopter" << endl;
+#endif
+	string smietnik;
+	ifstream plik(nazwa);
+	for (int i = 0; i < 3; i++)
+	{
+		getline(plik, smietnik);
+	}
+	plik >> *this;
+	plik.close();
+
+}
+
+void Helikopter::wypisz_helikopter()
+{
+	(*this).wypisz_samolot();
+	cout << ilosc_smigiel;
+}
+
 
 ostream& operator << (ostream& out, Helikopter& helikopter)
 {
-	out << "Ilosc smigiel: " << helikopter.ilosc_smigiel << endl;
+	out << helikopter.ilosc_smigiel << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Helikopter &helikopter)
 {
-	s >> helikopter.numer;
+	s >> helikopter.ilosc_smigiel;
 	return s;
 }
 

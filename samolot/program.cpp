@@ -129,7 +129,7 @@ void testuj()
 
 int main()
 {
-	int a, przycisk = 0;
+	int przycisk = 0;
 	int opcja=0;
 	string imie, nazwisko;
 	Samolot sam1(20,15);
@@ -160,9 +160,14 @@ int main()
 
 		case 2:
 			cout << "wybrano 2" << endl;
-			sam1.zapisz_samolot("samolot.txt");
+			//sam1.zapisz_samolot("samolot.txt");
 			heli1.zapisz_helikopter("helikopter.txt");
 			samochod1.zapisz_samochod("samochod.txt");
+			sam1.wypisz_samolot();
+			sam1.wczytaj_samolot("samolot.txt");
+			sam1.wypisz_samolot();
+			heli1.wypisz_helikopter();
+
 			break;
 
 		case 3:

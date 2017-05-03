@@ -17,13 +17,13 @@ Samochod::Samochod() {
 
 ostream& operator << (ostream& out, Samochod& samochod)
 {
-	out << "Przebieg: " << samochod.przebieg << endl;
+	out << samochod.przebieg << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Samochod &samochod)
 {
-	s >> samochod.numer;
+	s >> samochod.przebieg;
 	return s;
 }
 
@@ -36,6 +36,21 @@ void Samochod::zapisz_samochod(string nazwa) {
 	plik.open(nazwa);
 	plik.seekg(0, ios::end);
 	plik << *this;
+	plik.close();
+
+}
+
+void Samochod::wczytaj_samochod(string nazwa) {
+#ifdef _DEBUG  
+	cout << "Wczytano obiekt Samochod" << endl;
+#endif
+	string smietnik;
+	ifstream plik(nazwa);
+	for (int i = 0; i < 2; i++)
+	{
+		getline(plik, smietnik);
+	}
+	plik >> *this;
 	plik.close();
 
 }

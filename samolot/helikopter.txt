@@ -1,4 +1,4 @@
-Numer: 123456
-Ilosc miejsc: 15
-Maksymalna wysokosc: 12
-Ilosc smigiel: 2
+123456
+15
+12
+2
