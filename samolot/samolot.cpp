@@ -188,11 +188,12 @@ void Samolot::wczytaj_samolot(string nazwa) {
 
 }
 
-void Samolot::wypisz_samolot()
-{
-	(*this).wypisz_srodek();
-	cout << max_wysokosc << endl;
+void Samolot::wypisz_stan()
+{	
+	cout << "Uruchomiono funkcje wypisz z klasy samolot" << endl;
+	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).max_wysokosc << endl;
 }
+
 
 //destruktor
 Samolot::~Samolot()

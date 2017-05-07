@@ -35,7 +35,7 @@ public:
 	virtual void zapisz_samolot(string nazwa);
 	virtual void wczytaj_samolot(string nazwa);
 
-	virtual void wypisz_samolot();
+	virtual void wypisz_stan();
 
 
 	///Operator strumieniowy <<

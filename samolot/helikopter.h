@@ -18,7 +18,7 @@ public:
 	virtual void zapisz_helikopter(string nazwa);
 	virtual void wczytaj_helikopter(string nazwa);
 
-	void wypisz_helikopter();
+	void wypisz_stan();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Helikopter& helikopter);

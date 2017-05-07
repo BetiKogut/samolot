@@ -55,6 +55,12 @@ void Samochod::wczytaj_samochod(string nazwa) {
 
 }
 
+void Samochod :: wypisz_stan()
+{
+	cout << "Uruchomiono funkcje wypisz z klasy samochod:" << endl;
+	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).przebieg << endl;
+}
+
 Samochod :: ~Samochod()
 {
 #ifdef _DEBUG

@@ -67,10 +67,10 @@ void Helikopter::wczytaj_helikopter(string nazwa) {
 
 }
 
-void Helikopter::wypisz_helikopter()
+void Helikopter::wypisz_stan()
 {
-	(*this).wypisz_samolot();
-	cout << ilosc_smigiel;
+	cout << "Uruchomiono funkcje wypisz z klasy helikopter" << endl;
+	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).max_wysokosc << endl << (*this).ilosc_smigiel << endl;
 }
 
 

@@ -135,6 +135,10 @@ int main()
 	Samolot sam1(20,15);
 	Helikopter heli1(15,5,12);
 	Samochod samochod1;
+	Srodek_transportu *srodek_transportu[3];
+	srodek_transportu[0] = &sam1;
+	srodek_transportu[1] = &samochod1;
+	srodek_transportu[2] = &heli1;
 	system("cls");
 
 #ifdef _DEBUG
@@ -144,9 +148,9 @@ int main()
 		cout << endl << endl << "~~~~Menu programu~~~~" << endl << endl;
 		cout << "[0]zamknij program" << endl;
 		cout << "[1]Testy podstawowe klas" << endl;
-		cout << "[2]" "Testy zapisu do pliku" << endl;
-		cout << "[3]" "Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
-		cout << "[4]" << endl;
+		cout << "[2] Testy zapisu do pliku" << endl;
+		cout << "[3] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
+		cout << "[4] Test funkcji wirtualnej " << endl;
 		cin >> opcja;
 
 		switch (opcja)
@@ -160,13 +164,13 @@ int main()
 
 		case 2:
 			cout << "wybrano 2" << endl;
-			//sam1.zapisz_samolot("samolot.txt");
+			sam1.zapisz_samolot("samolot.txt");
 			heli1.zapisz_helikopter("helikopter.txt");
 			samochod1.zapisz_samochod("samochod.txt");
-			sam1.wypisz_samolot();
+			sam1.wypisz_stan();
 			sam1.wczytaj_samolot("samolot.txt");
-			sam1.wypisz_samolot();
-			heli1.wypisz_helikopter();
+			sam1.wypisz_stan();
+			heli1.wypisz_stan();
 
 			break;
 
@@ -178,7 +182,10 @@ int main()
 			break;
 
 		case 4:
-			cout << "wybrano 4";
+			for (int i = 0; i < 3; i++)
+			{
+				srodek_transportu[i]->wypisz_stan();
+			}
 			break;
 
 		default:
@@ -187,7 +194,6 @@ int main()
 			 
 		}
 	} while (opcja != 0);
-	//testuj();
 
 #endif
 

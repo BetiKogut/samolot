@@ -16,6 +16,9 @@ public:
 
 	void zapisz_samochod(string nazwa);
 	void wczytaj_samochod(string nazwa);
+
+	virtual void wypisz_stan();
+
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samochod& samochod);
 
