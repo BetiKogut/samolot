@@ -54,13 +54,6 @@ void Helikopter::wczytaj_helikopter(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Wczytano dane Helikopter" << endl;
 #endif
-	/*string smietnik;
-	(*this).wczytaj_samolot(nazwa);
-	ifstream plik(nazwa);
-	for (int i = 0; i < 3; i++)
-	{
-		getline(plik, smietnik);
-	}*/
 	ifstream plik;
 	plik.open(nazwa);
 	plik >> *this;
@@ -71,7 +64,7 @@ void Helikopter::wczytaj_helikopter(string nazwa) {
 void Helikopter::wypisz_stan()
 {
 	cout << "Uruchomiono funkcje wypisz z klasy helikopter" << endl;
-	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).max_wysokosc << endl << (*this).ilosc_smigiel << endl;
+	cout << (*this);
 }
 
 

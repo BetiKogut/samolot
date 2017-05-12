@@ -177,13 +177,6 @@ void Samolot::wczytaj_samolot(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Wczytano obiekt Samolot" << endl;
 #endif
-	/*string smietnik;
-	(*this).wczytaj_srodek(nazwa);
-	ifstream plik(nazwa);
-	for (int i = 0; i < 2; i++)
-	{
-		getline(plik, smietnik);
-	}*/
 	ifstream plik;
 	plik.open(nazwa);
 	plik >> *this;
@@ -194,7 +187,7 @@ void Samolot::wczytaj_samolot(string nazwa) {
 void Samolot::wypisz_stan()
 {	
 	cout << "Uruchomiono funkcje wypisz z klasy samolot" << endl;
-	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).max_wysokosc << endl;
+	cout << (*this);
 }
 
 

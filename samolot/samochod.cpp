@@ -44,12 +44,6 @@ void Samochod::wczytaj_samochod(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Wczytano obiekt Samochod" << endl;
 #endif
-	/*string smietnik;
-	ifstream plik(nazwa);
-	for (int i = 0; i < 2; i++)
-	{
-		getline(plik, smietnik);
-	}*/
 	ifstream plik;
 	plik.open(nazwa);
 	plik >> *this;
@@ -60,7 +54,7 @@ void Samochod::wczytaj_samochod(string nazwa) {
 void Samochod :: wypisz_stan()
 {
 	cout << "Uruchomiono funkcje wypisz z klasy samochod:" << endl;
-	cout << (*this).numer << endl << (*this).ilosc_miejsc << endl << (*this).przebieg << endl;
+	cout << (*this);
 }
 
 Samochod :: ~Samochod()
