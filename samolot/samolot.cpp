@@ -83,12 +83,14 @@ void Samolot::statycznametoda()
 
 ostream& operator << (ostream& out, Samolot& samolot)
 {
+	out << *((Srodek_transportu*)(&samolot));
 	out << samolot.max_wysokosc << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Samolot &samolot) 
 {
+	s >> *((Srodek_transportu*)(&samolot));
 	s >> samolot.max_wysokosc;
 	return s;
 }
@@ -162,12 +164,10 @@ Samolot::operator int() const
 
 void Samolot::zapisz_samolot(string nazwa) {
 #ifdef _DEBUG  
-	cout << "Zapisano obiekt Samolot" << endl;
+	cout << "Zapisano dane Samolot" << endl;
 #endif
-	(*this ).zapisz_srodek(nazwa);
-	fstream plik;
+	ofstream plik;
 	plik.open(nazwa);
-	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
 
@@ -177,12 +177,15 @@ void Samolot::wczytaj_samolot(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Wczytano obiekt Samolot" << endl;
 #endif
-	string smietnik;
+	/*string smietnik;
+	(*this).wczytaj_srodek(nazwa);
 	ifstream plik(nazwa);
 	for (int i = 0; i < 2; i++)
 	{
 		getline(plik, smietnik);
-	}
+	}*/
+	ifstream plik;
+	plik.open(nazwa);
 	plik >> *this;
 	plik.close();
 
@@ -202,6 +205,5 @@ Samolot::~Samolot()
 	cout << "Wywolano destruktor ~Samolot" << endl;
 #endif
 	liczba_obiektow--;
-	//delete[]pasazerowie;
 
 }

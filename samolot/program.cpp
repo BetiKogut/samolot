@@ -13,20 +13,22 @@ using std::string;
 void testuj()
 {	
 	vector <Srodek_transportu*> obiekt;
-	Samolot(10, 15);
 	Samolot samolot1(100, 3), samolot2(50, 5);
+	obiekt.push_back(&samolot1);
+	obiekt.push_back(&samolot2);
 	Pasazerowie pasazer1;
 	Zaloga zaloga1, zaloga2;
 	DaneSamolotu dane1, dane2;
 	Samolot samolot3(samolot2);
+	obiekt.push_back(&samolot3);
 
 	cout << endl << "Testowanie operatorow:" << endl;
 
 	cout << "Operator + napisow:" << endl;
-	cout << "Imie: " << pasazer1.zwrocimie();//
-	cout << endl << "Nazwisko: " << pasazer1.zwrocnazwisko();//
+	cout << "Imie: " << pasazer1.zwrocimie();
+	cout << endl << "Nazwisko: " << pasazer1.zwrocnazwisko();
 	cout << endl << "Cala nazwa: ";
-	pasazer1.calanazwa();//
+	pasazer1.calanazwa();
 
 	cout << endl << endl << "Operator == :" << endl;
 	if (zaloga1 == zaloga2)
@@ -108,10 +110,10 @@ void testuj()
 
 	cout << endl << endl << "Operator ! :";
 	cout << endl << "Nadbagaz=";
-	pasazer1.zwrocnadbagaz();//
+	pasazer1.zwrocnadbagaz();
 	!(pasazer1);
 	cout << endl << "Nadbagaz=";
-	pasazer1.zwrocnadbagaz();//
+	pasazer1.zwrocnadbagaz();
 
 	cout << endl << endl << "Operator << :" << endl;
 	cout << samolot1;
@@ -121,9 +123,6 @@ void testuj()
 	Samolot::statycznametoda();
 
 	cout << endl << endl;
-
-
-	//delete  pasazer1;
 
 }
 
@@ -146,8 +145,8 @@ int main()
 	do 
 	{
 		cout << endl << endl << "~~~~Menu programu~~~~" << endl << endl;
-		cout << "[0]zamknij program" << endl;
-		cout << "[1]Testy podstawowe klas" << endl;
+		cout << "[0] Zamknij program" << endl;
+		cout << "[1] Testy podstawowe klas" << endl;
 		cout << "[2] Testy zapisu do pliku" << endl;
 		cout << "[3] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
 		cout << "[4] Test funkcji wirtualnej " << endl;
@@ -163,13 +162,18 @@ int main()
 			break;
 
 		case 2:
-			cout << "wybrano 2" << endl;
 			sam1.zapisz_samolot("samolot.txt");
 			heli1.zapisz_helikopter("helikopter.txt");
 			samochod1.zapisz_samochod("samochod.txt");
+			cout << "Stan samochodu: " << endl;
 			sam1.wypisz_stan();
-			sam1.wczytaj_samolot("samolot.txt");
+			sam1.wczytaj_samolot("samolot_test.txt");
+			cout << endl << "Nowy stan samolotu:" << endl;
 			sam1.wypisz_stan();
+			cout << endl << "Stan helikoptera:" << endl;
+			heli1.wypisz_stan();
+			heli1.wczytaj_helikopter("helikopter_test.txt");
+			cout << endl << "Nowy stan helikoptera:" << endl;
 			heli1.wypisz_stan();
 
 			break;
@@ -177,7 +181,7 @@ int main()
 		case 3:
 			Srodek_transportu *srodek;
 
-			srodek = new Helikopter();
+			srodek = new Helikopter(15,3,13);
 			delete srodek;
 			break;
 
@@ -197,6 +201,4 @@ int main()
 
 #endif
 
-
-	//cin >> a;
 }

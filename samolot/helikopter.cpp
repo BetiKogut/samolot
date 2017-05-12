@@ -44,24 +44,25 @@ void Helikopter::zapisz_helikopter(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Zapisano obiekt Helikopter" << endl;
 #endif
-	(*this).zapisz_samolot(nazwa);
-	fstream plik;
+	ofstream plik;
 	plik.open(nazwa);
-	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
 }
 
 void Helikopter::wczytaj_helikopter(string nazwa) {
 #ifdef _DEBUG  
-	cout << "Wczytano obiekt Helikopter" << endl;
+	cout << "Wczytano dane Helikopter" << endl;
 #endif
-	string smietnik;
+	/*string smietnik;
+	(*this).wczytaj_samolot(nazwa);
 	ifstream plik(nazwa);
 	for (int i = 0; i < 3; i++)
 	{
 		getline(plik, smietnik);
-	}
+	}*/
+	ifstream plik;
+	plik.open(nazwa);
 	plik >> *this;
 	plik.close();
 
@@ -76,12 +77,14 @@ void Helikopter::wypisz_stan()
 
 ostream& operator << (ostream& out, Helikopter& helikopter)
 {
+	out << *((Samolot*)(&helikopter));
 	out << helikopter.ilosc_smigiel << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Helikopter &helikopter)
 {
+	s >> *((Samolot*)(&helikopter));
 	s >> helikopter.ilosc_smigiel;
 	return s;
 }

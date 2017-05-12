@@ -16,25 +16,25 @@ Samochod::Samochod() {
 
 
 ostream& operator << (ostream& out, Samochod& samochod)
-{
+{	
+	out << *((Srodek_transportu*)(&samochod));
 	out << samochod.przebieg << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Samochod &samochod)
 {
+	s >> *((Srodek_transportu*)(&samochod));
 	s >> samochod.przebieg;
 	return s;
 }
 
 void Samochod::zapisz_samochod(string nazwa) {
 #ifdef _DEBUG  
-	cout << "Zapisano obiekt Samochod" << endl;
+	cout << "Zapisano dane Samochod" << endl;
 #endif
-	(*this).zapisz_srodek(nazwa);
-	fstream plik;
+	ofstream plik;
 	plik.open(nazwa);
-	plik.seekg(0, ios::end);
 	plik << *this;
 	plik.close();
 
@@ -44,12 +44,14 @@ void Samochod::wczytaj_samochod(string nazwa) {
 #ifdef _DEBUG  
 	cout << "Wczytano obiekt Samochod" << endl;
 #endif
-	string smietnik;
+	/*string smietnik;
 	ifstream plik(nazwa);
 	for (int i = 0; i < 2; i++)
 	{
 		getline(plik, smietnik);
-	}
+	}*/
+	ifstream plik;
+	plik.open(nazwa);
 	plik >> *this;
 	plik.close();
 
