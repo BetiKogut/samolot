@@ -134,10 +134,11 @@ int main()
 	Samolot sam1(20,15);
 	Samolot_wojskowy wojskowy1(15,5,12);
 	Samochod samochod1;
-	Srodek_transportu *srodek_transportu[3];
-	srodek_transportu[0] = &sam1;
-	srodek_transportu[1] = &samochod1;
-	srodek_transportu[2] = &wojskowy1;
+	//Srodek_transportu *srodek_transportu[3];
+	vector <Srodek_transportu*> obiekt;
+	obiekt.push_back(&sam1);
+	obiekt.push_back(&samochod1);
+	obiekt.push_back(&wojskowy1);
 	system("cls");
 
 #ifdef _DEBUG
@@ -176,6 +177,8 @@ int main()
 			cout << endl << "Nowy stan Samolotu wojskowego:" << endl;
 			wojskowy1.wypisz_stan();
 
+			samochod1.wczytaj_samochod("sam.txt");
+
 			break;
 
 		case 3:
@@ -188,7 +191,7 @@ int main()
 		case 4:
 			for (int i = 0; i < 3; i++)
 			{
-				srodek_transportu[i]->wypisz_stan();
+				obiekt[i]->wypisz_stan();
 			}
 			break;
 

@@ -40,24 +40,39 @@ Samolot_wojskowy::Samolot_wojskowy(int miejsca, int ilosc_osob, float max_wys)
 
 }
 
-void Samolot_wojskowy::zapisz_samolot_wojskowy(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Zapisano obiekt Samolot_wojskowy" << endl;
-#endif
+void Samolot_wojskowy::zapisz_samolot_wojskowy(string nazwa) 
+{
 	ofstream plik;
 	plik.open(nazwa);
-	plik << *this;
-	plik.close();
+	if (!plik)
+	{
+		cout << "!nie mozna utworzyc pliku!";
+	}
+	else
+
+	{
+#ifdef _DEBUG  
+		cout << "Zapisano dane Samolot_wojskowy" << endl;
+#endif
+		plik << *this;
+		plik.close();
+	}
 }
 
-void Samolot_wojskowy::wczytaj_samolot_wojskowy(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Wczytano dane Samolot_wojskowy" << endl;
-#endif
+void Samolot_wojskowy::wczytaj_samolot_wojskowy(string nazwa) 
+{
 	ifstream plik;
 	plik.open(nazwa);
-	plik >> *this;
-	plik.close();
+	if (!plik)
+		cout << "!nie mozna otworzyc pliku!";
+	else
+	{
+#ifdef _DEBUG  
+		cout << "Wczytano obiekt Samolot_wojskowy" << endl;
+#endif
+		plik >> *this;
+		plik.close();
+	}
 
 }
 

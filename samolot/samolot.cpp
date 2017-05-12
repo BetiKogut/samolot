@@ -162,25 +162,40 @@ Samolot::operator int() const
 	return ilosc_miejsc;
 }
 
-void Samolot::zapisz_samolot(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Zapisano dane Samolot" << endl;
-#endif
+void Samolot::zapisz_samolot(string nazwa) 
+{
 	ofstream plik;
 	plik.open(nazwa);
-	plik << *this;
-	plik.close();
+	if (!plik)
+	{
+		cout << "!nie mozna utworzyc pliku!";
+	}
+	else
+
+	{
+#ifdef _DEBUG  
+		cout << "Zapisano dane Samolot" << endl;
+#endif
+		plik << *this;
+		plik.close();
+	}
 
 }
 
 void Samolot::wczytaj_samolot(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Wczytano obiekt Samolot" << endl;
-#endif
 	ifstream plik;
 	plik.open(nazwa);
-	plik >> *this;
-	plik.close();
+	if (!plik)
+		cout << "!nie mozna otworzyc pliku!";
+	else
+	{
+#ifdef _DEBUG  
+		cout << "Wczytano obiekt Samolot" << endl;
+#endif
+		plik >> *this;
+		plik.close();
+
+	}
 
 }
 

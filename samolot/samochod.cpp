@@ -29,25 +29,41 @@ istream& operator >> (istream& s, Samochod &samochod)
 	return s;
 }
 
-void Samochod::zapisz_samochod(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Zapisano dane Samochod" << endl;
-#endif
+void Samochod::zapisz_samochod(string nazwa) 
+{
 	ofstream plik;
 	plik.open(nazwa);
-	plik << *this;
-	plik.close();
+	if (!plik)
+	{
+		cout << "!nie mozna utworzyc pliku!";
+	}
+	else
+
+	{
+#ifdef _DEBUG  
+		cout << "Zapisano dane Samochod" << endl;
+#endif
+		plik << *this;
+		plik.close();
+	}
 
 }
 
 void Samochod::wczytaj_samochod(string nazwa) {
-#ifdef _DEBUG  
-	cout << "Wczytano obiekt Samochod" << endl;
-#endif
+
 	ifstream plik;
 	plik.open(nazwa);
-	plik >> *this;
-	plik.close();
+	if(!plik)
+		cout << "!nie mozna otworzyc pliku!";
+	else
+	{
+		#ifdef _DEBUG  
+		cout << "Wczytano obiekt Samochod" << endl;
+		#endif
+		plik >> *this;
+		plik.close();
+
+	}
 
 }
 
