@@ -2,7 +2,7 @@
 #include <string>
 #include "srodek_transportu.h"
 #include "samolot.h"
-#include "helikopter.h"
+#include "samolot_wojskowy.h"
 #include "samochod.h"
 #include <vector>
 
@@ -132,12 +132,12 @@ int main()
 	int opcja=0;
 	string imie, nazwisko;
 	Samolot sam1(20,15);
-	Helikopter heli1(15,5,12);
+	Samolot_wojskowy wojskowy1(15,5,12);
 	Samochod samochod1;
 	Srodek_transportu *srodek_transportu[3];
 	srodek_transportu[0] = &sam1;
 	srodek_transportu[1] = &samochod1;
-	srodek_transportu[2] = &heli1;
+	srodek_transportu[2] = &wojskowy1;
 	system("cls");
 
 #ifdef _DEBUG
@@ -163,25 +163,25 @@ int main()
 
 		case 2:
 			sam1.zapisz_samolot("samolot.txt");
-			heli1.zapisz_helikopter("helikopter.txt");
+			wojskowy1.zapisz_samolot_wojskowy("wojskowy.txt");
 			samochod1.zapisz_samochod("samochod.txt");
 			cout << "Stan samochodu: " << endl;
 			sam1.wypisz_stan();
 			sam1.wczytaj_samolot("samolot_test.txt");
 			cout << endl << "Nowy stan samolotu:" << endl;
 			sam1.wypisz_stan();
-			cout << endl << "Stan helikoptera:" << endl;
-			heli1.wypisz_stan();
-			heli1.wczytaj_helikopter("helikopter_test.txt");
-			cout << endl << "Nowy stan helikoptera:" << endl;
-			heli1.wypisz_stan();
+			cout << endl << "Stan Samolotu wojskowego:" << endl;
+			wojskowy1.wypisz_stan();
+			wojskowy1.wczytaj_samolot_wojskowy("wojskowy_test.txt");
+			cout << endl << "Nowy stan Samolotu wojskowego:" << endl;
+			wojskowy1.wypisz_stan();
 
 			break;
 
 		case 3:
 			Srodek_transportu *srodek;
 
-			srodek = new Helikopter(15,3,13);
+			srodek = new Samolot_wojskowy(15,3,13);
 			delete srodek;
 			break;
 

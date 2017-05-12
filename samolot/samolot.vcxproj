@@ -111,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dane_samolotu.h" />
-    <ClInclude Include="helikopter.h" />
+    <ClInclude Include="samolot_wojskowy.h" />
     <ClInclude Include="pasazerowie.h" />
     <ClInclude Include="samochod.h" />
     <ClInclude Include="samolot.h" />
@@ -124,7 +124,7 @@
     <ClCompile Include="program.cpp" />
     <ClCompile Include="samochod.cpp" />
     <ClCompile Include="samolot.cpp" />
-    <ClCompile Include="helikopter.cpp" />
+    <ClCompile Include="samolot_wojskowy.cpp" />
     <ClCompile Include="srodek_transportu.cpp" />
     <ClCompile Include="zaloga.cpp" />
   </ItemGroup>
