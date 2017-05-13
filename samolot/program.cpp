@@ -145,13 +145,32 @@ int main()
 
 	do 
 	{
+		opcja = -1;
 		cout << endl << endl << "~~~~Menu programu~~~~" << endl << endl;
 		cout << "[0] Zamknij program" << endl;
 		cout << "[1] Testy podstawowe klas" << endl;
 		cout << "[2] Testy zapisu do pliku" << endl;
 		cout << "[3] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
-		cout << "[4] Test funkcji wirtualnej " << endl;
-		cin >> opcja;
+		cout << "[4] Test funkcji wirtualnej wypisz_stan" << endl;
+
+		cin.exceptions(ifstream::failbit | ifstream::badbit);
+		do
+		{
+			try
+			{
+				cin >> opcja;
+				if(opcja < 0 || opcja > 4)
+					cout << "!Bledne dane!" << endl;
+			}
+			catch (ifstream::failure)
+			{
+				cout << "!Bledne dane!" << endl;
+				cin.clear();
+				cin.ignore(100, '\n');
+			}
+			
+		} while (opcja < 0 || opcja > 4);
+
 
 		switch (opcja)
 		{
@@ -195,9 +214,9 @@ int main()
 			}
 			break;
 
-		default:
-			cout << "!bledne dane!" << endl;
-			break;
+		//default:
+			//cout << "!bledne dane!" << endl;
+			//break;
 			 
 		}
 	} while (opcja != 0);

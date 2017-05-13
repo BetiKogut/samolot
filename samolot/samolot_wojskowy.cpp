@@ -36,8 +36,6 @@ Samolot_wojskowy::Samolot_wojskowy(int miejsca, int ilosc_osob, float max_wys)
 		}
 	}
 	else cout << "!Za duzo osob!" << endl;
-
-
 }
 
 void Samolot_wojskowy::zapisz_samolot_wojskowy(string nazwa) 

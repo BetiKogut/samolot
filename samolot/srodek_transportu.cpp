@@ -13,15 +13,35 @@ Srodek_transportu :: Srodek_transportu() {
 }
 
 ///Zdefiniowany operator strumieniowy
-std::ostream& operator << (std::ostream &s, Srodek_transportu &srodek_transportu) {
-	s << srodek_transportu.numer;
+ostream& operator << (ostream &s, Srodek_transportu &srodek_transportu) {
+	s << srodek_transportu.numer << endl << srodek_transportu.ilosc_miejsc << endl;
 	return s;
 }
 
 ///Zdefiniowany operator strumieniowy
-std::istream& operator >> (std::istream& s, Srodek_transportu &srodek_transportu) {
-	s >> srodek_transportu.numer;
+istream& operator >> (istream& s, Srodek_transportu &srodek_transportu) {
+	s >> srodek_transportu.numer >> srodek_transportu.ilosc_miejsc;
 	return s;
+}
+
+void Srodek_transportu::zapisz_srodek(string nazwa) {
+#ifdef _DEBUG  
+	cout << "Zapisano dane Srodek" << endl;
+#endif
+	ofstream plik(nazwa);
+	plik << *this;
+	plik.close();
+
+}
+
+void Srodek_transportu::wczytaj_srodek(string nazwa) {
+#ifdef _DEBUG  
+	cout << "Wczytano obiekt Srodek" << endl;
+#endif
+	fstream plik(nazwa);
+	plik >> *this;
+	plik.close();
+
 }
 
 Srodek_transportu :: ~Srodek_transportu()

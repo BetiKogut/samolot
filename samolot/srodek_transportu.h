@@ -11,6 +11,8 @@ protected:
 	int ilosc_miejsc;
 	int numer;
 
+	int pozycja;
+
 public:
 	///Kontruktor domyœlny
 	Srodek_transportu();
@@ -18,9 +20,10 @@ public:
 	///Destruktor wirtualny
 	virtual ~Srodek_transportu();
 
+	virtual void zapisz_srodek(string nazwa);
+	virtual void wczytaj_srodek(string nazwa);
 
-	///Procedura wirtualna
-	//virtual void wyswietlobiekt(); = 0;
+	virtual void wypisz_stan()=0;
 
 	///Operator strumieniowy <<
 	friend std::ostream& operator << (std::ostream &s, Srodek_transportu &srodek_transportu);
