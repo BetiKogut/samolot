@@ -12,9 +12,9 @@ Pasazerowie::Pasazerowie()
 	cout << "Wywolano konstruktor Pasazerowie" << endl;
 
 #endif
-	imie = "Adam";
-	nazwisko = "Abacki";
-	nadbagaz = 1;
+	imie = "Domyslne_imie";
+	nazwisko = "Domyslne_nazwisko";
+	nadbagaz = 0;
 }
 
 string Pasazerowie::zwrocimie()
@@ -44,6 +44,11 @@ void Pasazerowie::zmienimie(string noweimie)
 	imie = noweimie;
 }
 
+void Pasazerowie::zmiennazwisko(string nowenazwisko)
+{
+	nazwisko = nowenazwisko;
+}
+
 void Pasazerowie::operator!()
 {
 	if (nadbagaz == 1)
@@ -53,18 +58,13 @@ void Pasazerowie::operator!()
 
 ostream& operator << (ostream& out, Pasazerowie &pasazerowie)
 {
-	out << pasazerowie.imie;
+	out << pasazerowie.imie << " " << pasazerowie.nazwisko << endl;
 	return out;
 }
 
 istream& operator >> (istream& s, Pasazerowie &pasazerowie)
 {
-	cout << "Wpisz imie pasazera: ";
-	s >> pasazerowie.imie;
-	cout << endl << "Wpisz nazwisko pasazera: ";
-	s >> pasazerowie.nazwisko;
-	cout << endl;
-
+	s >> pasazerowie.imie >> pasazerowie.nazwisko;
 	return s;
 }
 

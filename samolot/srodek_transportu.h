@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include "pasazerowie.h"
 
 using namespace std;
 
@@ -8,10 +10,12 @@ using namespace std;
 class Srodek_transportu {
 
 protected:
+	///zmienna przechowujaca ilosc miejsc w srodku transportu
 	int ilosc_miejsc;
+	///zmienna przechowujaca numer srodku transportu
 	int numer;
-
-	int pozycja;
+	///wektor przechowujacy pasazerow samolotu
+	vector <Pasazerowie> wektor_pasazerow;
 
 public:
 	///Kontruktor domyœlny
@@ -20,9 +24,17 @@ public:
 	///Destruktor wirtualny
 	virtual ~Srodek_transportu();
 
-	virtual void zapisz_srodek(string nazwa);
-	virtual void wczytaj_srodek(string nazwa);
-
+	///funkcja zapisu do pliku zmiennych z klasy srodek_transportu
+	/**
+	\param nazwa to nazwa pliku txt
+	*/
+	void zapisz_srodek(string nazwa);
+	///funkcja odczytu z pliku zmiennych z klasy srodek_transportu
+	/**
+	\param nazwa to nazwa pliku txt
+	*/
+	void wczytaj_srodek(string nazwa);
+	///metoda wirtualna wypisywania stanu
 	virtual void wypisz_stan()=0;
 
 	///Operator strumieniowy <<

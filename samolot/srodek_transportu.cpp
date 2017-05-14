@@ -12,14 +12,20 @@ Srodek_transportu :: Srodek_transportu() {
 	
 }
 
-///Zdefiniowany operator strumieniowy
-ostream& operator << (ostream &s, Srodek_transportu &srodek_transportu) {
-	s << srodek_transportu.numer << endl << srodek_transportu.ilosc_miejsc << endl;
-	return s;
+ostream& operator << (ostream &out, Srodek_transportu &srodek_transportu) {
+	for (int i = 0; i < srodek_transportu.wektor_pasazerow.size(); i++)
+	{
+		out << srodek_transportu.wektor_pasazerow[i];
+	}
+	out << srodek_transportu.numer << endl << srodek_transportu.ilosc_miejsc << endl;
+	return out;
 }
 
-///Zdefiniowany operator strumieniowy
 istream& operator >> (istream& s, Srodek_transportu &srodek_transportu) {
+	for (int i = 0; i < srodek_transportu.wektor_pasazerow.size(); i++)
+	{
+		s >> srodek_transportu.wektor_pasazerow[i];
+	}
 	s >> srodek_transportu.numer >> srodek_transportu.ilosc_miejsc;
 	return s;
 }

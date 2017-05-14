@@ -5,7 +5,6 @@
 
 using namespace std;
 
-//konstruktor
 DaneSamolotu :: DaneSamolotu()
 {
 #ifdef _DEBUG  
@@ -50,16 +49,10 @@ ostream& operator << (ostream& out, DaneSamolotu& dane)
 
 istream& operator >> (istream& s, DaneSamolotu &dane)
 {
-	cout << "Wpisz start lotu: ";
-	s >> dane.start;
-	cout << endl << "Wpisz cel lotu: ";
-	s >> dane.cel;
-	cout << endl;
-
+	s >> dane.start >> dane.cel;
 	return s;
 }
 
-//destruktor
 DaneSamolotu::~DaneSamolotu()
 {
 #ifdef _DEBUG

@@ -43,7 +43,7 @@ void testuj()
 	if (samolot1 > samolot2)
 		cout << "true" << endl;
 	else cout << "false" << endl;
-	zmienilosc(samolot2, 200);
+	samolot2.zmienilosc(200);
 	if (samolot1 > samolot2)
 		cout << "true";
 	else cout << "false";
@@ -117,8 +117,6 @@ void testuj()
 
 	cout << endl << endl << "Operator << :" << endl;
 	cout << samolot1;
-	cin >> samolot1;
-	cout << samolot1;
 	
 	Samolot::statycznametoda();
 
@@ -130,16 +128,23 @@ int main()
 {
 	int przycisk = 0;
 	int opcja=0;
-	string imie, nazwisko;
-	Samolot sam1(20,15);
-	Samolot_wojskowy wojskowy1(15,5,12);
+	//string imie, nazwisko;
+
+	Samolot samolot1(20,3);
+	Samolot_wojskowy wojskowy1(15,2,12);
 	Samochod samochod1;
-	//Srodek_transportu *srodek_transportu[3];
+
 	vector <Srodek_transportu*> obiekt;
-	obiekt.push_back(&sam1);
+	obiekt.push_back(&samolot1);
 	obiekt.push_back(&samochod1);
 	obiekt.push_back(&wojskowy1);
+
+	Srodek_transportu *srodki[3];
+	srodki[0] = &samolot1;
+	srodki[1] = &wojskowy1;
+	srodki[2] = &samochod1;
 	system("cls");
+
 
 #ifdef _DEBUG
 
@@ -150,8 +155,11 @@ int main()
 		cout << "[0] Zamknij program" << endl;
 		cout << "[1] Testy podstawowe klas" << endl;
 		cout << "[2] Testy zapisu do pliku" << endl;
-		cout << "[3] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
-		cout << "[4] Test funkcji wirtualnej wypisz_stan" << endl;
+		cout << "[3] Testy odczytu z pliku" << endl;
+		cout << "[4] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
+		cout << "[5] Testy polimorfizm z uzyciem tablicy wskaznikow na obiekty klasy podstawowej" << endl;
+		cout << "[6] Test funkcji wirtualnej wypisz_stan" << endl;
+
 
 		cin.exceptions(ifstream::failbit | ifstream::badbit);
 		do
@@ -169,7 +177,7 @@ int main()
 				cin.ignore(100, '\n');
 			}
 			
-		} while (opcja < 0 || opcja > 4);
+		} while (opcja < 0 || opcja > 5);
 
 
 		switch (opcja)
@@ -178,45 +186,57 @@ int main()
 		case 0:
 			break;
 		case 1:
+			system("cls");
 			testuj();
 			break;
 
 		case 2:
-			sam1.zapisz_samolot("samolot.txt");
+			system("cls");
+			samolot1.zapisz_samolot("samolot.txt");
 			wojskowy1.zapisz_samolot_wojskowy("wojskowy.txt");
 			samochod1.zapisz_samochod("samochod.txt");
-			cout << "Stan samochodu: " << endl;
-			sam1.wypisz_stan();
-			sam1.wczytaj_samolot("samolot_test.txt");
-			cout << endl << "Nowy stan samolotu:" << endl;
-			sam1.wypisz_stan();
-			cout << endl << "Stan Samolotu wojskowego:" << endl;
+
+			break;
+		case 3:
+			system("cls");
+			cout << "Stan samolotu: " << endl;
+			samolot1.wypisz_stan();
+			samolot1.wczytaj_samolot("samolot_test.txt");
+			cout << endl  << "Nowy stan samolotu:" << endl;
+			samolot1.wypisz_stan();
+			cout << endl << endl << "Stan Samolotu wojskowego:" << endl;
 			wojskowy1.wypisz_stan();
 			wojskowy1.wczytaj_samolot_wojskowy("wojskowy_test.txt");
 			cout << endl << "Nowy stan Samolotu wojskowego:" << endl;
 			wojskowy1.wypisz_stan();
-
+			std::cout << endl << endl << "Proba wczytania z nieistniejacego pliku" << endl;
 			samochod1.wczytaj_samochod("sam.txt");
 
 			break;
 
-		case 3:
+		case 4:
+			system("cls");
 			Srodek_transportu *srodek;
 
 			srodek = new Samolot_wojskowy(15,3,13);
 			delete srodek;
 			break;
 
-		case 4:
+		case 5:
+			system("cls");
+			for (int i = 0; i < 3; i++)
+			{
+				srodki[i]->wypisz_stan();
+			}
+			break;
+
+		case 6:
+			system("cls");
 			for (int i = 0; i < 3; i++)
 			{
 				obiekt[i]->wypisz_stan();
 			}
 			break;
-
-		//default:
-			//cout << "!bledne dane!" << endl;
-			//break;
 			 
 		}
 	} while (opcja != 0);

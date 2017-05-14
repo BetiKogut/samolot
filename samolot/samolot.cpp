@@ -95,11 +95,6 @@ istream& operator >> (istream& s, Samolot &samolot)
 	return s;
 }
 
-void zmienilosc(Samolot & samolot, int nowailosc)
-{
-	samolot.ilosc_miejsc = nowailosc;
-}
-
 void Samolot::zwroc_iloscmiejsc()
 {
 	cout << ilosc_miejsc;

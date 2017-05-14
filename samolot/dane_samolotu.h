@@ -5,18 +5,31 @@
 
 using std::string;
 using namespace std;
-
+///klasa DaneSamolotu
 class DaneSamolotu {
 private:
+	///zmienna przechowujaca miejsce startu lotu
 	string start;
+	///zmienna przechowujaca miejsce ladowania
 	string cel;
 
 public:
-	DaneSamolotu(); //konstruktor
-	~DaneSamolotu(); //destruktor
+	///konstruktor domyslny
+	DaneSamolotu();
+	///destruktor
+	~DaneSamolotu();
+
+	///metoda zwracajace start i cel lotu
 	void zwrocdane();
+	///metoda umozliwiajaca zmiane danych lotu
+	/**
+	Umozliwia ustawienie nowego miejsca startu i celu lotu
+	\param miejsce startu i miejsce celu lotu
+	\return nic nie zwraca
+	*/
 	void zmiendane(string nowystart, string nowycel);
 
+	///przeciazony operator =
 	DaneSamolotu & operator = (const DaneSamolotu &dane);
 
 
