@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Samolot: Plik źródłowy srodek_transportu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Samolot
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">srodek_transportu.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="srodek__transportu_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pasazerowie_8h.html">pasazerowie.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_srodek__transportu.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_srodek__transportu.html">Srodek_transportu</a> {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_srodek__transportu.html#abc206dbf871266b8a818b3338be71e81">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_srodek__transportu.html#abc206dbf871266b8a818b3338be71e81">ilosc_miejsc</a>;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_srodek__transportu.html#aff822a566bc2403d4d99a9155771f8bc">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_srodek__transportu.html#aff822a566bc2403d4d99a9155771f8bc">numer</a>;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_srodek__transportu.html#ae54b5f56778df51d0efd28bddebed26e">   18</a></span>&#160;    vector &lt;Pasazerowie&gt; <a class="code" href="class_srodek__transportu.html#ae54b5f56778df51d0efd28bddebed26e">wektor_pasazerow</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_srodek__transportu.html">Srodek_transportu</a>();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_srodek__transportu.html">Srodek_transportu</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> zapisz_srodek(<span class="keywordtype">string</span> nazwa);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> wczytaj_srodek(<span class="keywordtype">string</span> nazwa);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> wypisz_stan()=0;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ustaw_domyslne()=0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="dane__samolotu_8cpp.html#aaaf6a3db89522d407cf92091a98c2e80">operator &lt;&lt; </a>(std::ostream &amp;s, <a class="code" href="class_srodek__transportu.html">Srodek_transportu</a> &amp;srodek_transportu);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">friend</span> std::istream&amp; <a class="code" href="dane__samolotu_8cpp.html#ae1a66a9e4246344008e3874910e3045d">operator &gt;&gt; </a>(std::istream &amp;s, <a class="code" href="class_srodek__transportu.html">Srodek_transportu</a> &amp;srodek_transportu);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div><div class="ttc" id="dane__samolotu_8cpp_html_ae1a66a9e4246344008e3874910e3045d"><div class="ttname"><a href="dane__samolotu_8cpp.html#ae1a66a9e4246344008e3874910e3045d">operator&gt;&gt;</a></div><div class="ttdeci">istream &amp; operator&gt;&gt;(istream &amp;s, DaneSamolotu &amp;dane)</div><div class="ttdef"><b>Definition:</b> dane_samolotu.cpp:50</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="class_srodek__transportu_html_abc206dbf871266b8a818b3338be71e81"><div class="ttname"><a href="class_srodek__transportu.html#abc206dbf871266b8a818b3338be71e81">Srodek_transportu::ilosc_miejsc</a></div><div class="ttdeci">int ilosc_miejsc</div><div class="ttdoc">&lt;zmienna przechowujaca ilosc miejsc w srodku transportu </div><div class="ttdef"><b>Definition:</b> srodek_transportu.h:14</div></div>
+<div class="ttc" id="class_srodek__transportu_html_aff822a566bc2403d4d99a9155771f8bc"><div class="ttname"><a href="class_srodek__transportu.html#aff822a566bc2403d4d99a9155771f8bc">Srodek_transportu::numer</a></div><div class="ttdeci">int numer</div><div class="ttdef"><b>Definition:</b> srodek_transportu.h:16</div></div>
+<div class="ttc" id="class_srodek__transportu_html"><div class="ttname"><a href="class_srodek__transportu.html">Srodek_transportu</a></div><div class="ttdoc">Klasa abstrakcyjna Srodek_transportu. </div><div class="ttdef"><b>Definition:</b> srodek_transportu.h:10</div></div>
+<div class="ttc" id="class_srodek__transportu_html_ae54b5f56778df51d0efd28bddebed26e"><div class="ttname"><a href="class_srodek__transportu.html#ae54b5f56778df51d0efd28bddebed26e">Srodek_transportu::wektor_pasazerow</a></div><div class="ttdeci">vector&lt; Pasazerowie &gt; wektor_pasazerow</div><div class="ttdoc">wektor przechowujacy pasazerow samolotu </div><div class="ttdef"><b>Definition:</b> srodek_transportu.h:18</div></div>
+<div class="ttc" id="dane__samolotu_8cpp_html_aaaf6a3db89522d407cf92091a98c2e80"><div class="ttname"><a href="dane__samolotu_8cpp.html#aaaf6a3db89522d407cf92091a98c2e80">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;out, DaneSamolotu &amp;dane)</div><div class="ttdef"><b>Definition:</b> dane_samolotu.cpp:44</div></div>
+<div class="ttc" id="pasazerowie_8h_html"><div class="ttname"><a href="pasazerowie_8h.html">pasazerowie.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

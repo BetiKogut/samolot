@@ -1,0 +1,180 @@
+\section{Dokumentacja klasy Samochod}
+\label{class_samochod}\index{Samochod@{Samochod}}
+
+
+Klasa \doxyref{Samochod}{str.}{class_samochod}, dziedziczy po klasie \doxyref{Srodek\+\_\+transportu}{str.}{class_srodek__transportu}.  
+
+
+
+
+{\ttfamily \#include $<$samochod.\+h$>$}
+
+Diagram dziedziczenia dla Samochod\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_samochod}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Samochod} ()
+\begin{DoxyCompactList}\small\item\em konstruktor domyslny \end{DoxyCompactList}\item 
+{\bf $\sim$\+Samochod} ()
+\begin{DoxyCompactList}\small\item\em destruktor \end{DoxyCompactList}\item 
+void {\bf zapisz\+\_\+samochod} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja zapisu do pliku zmiennych z klasy samochod \end{DoxyCompactList}\item 
+void {\bf wczytaj\+\_\+samochod} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja odczytu z pliku zmiennych z klasy samochod \end{DoxyCompactList}\item 
+virtual void {\bf wypisz\+\_\+stan} ()
+\begin{DoxyCompactList}\small\item\em funkcja wypisujaca stan samochodu \end{DoxyCompactList}\item 
+virtual void {\bf ustaw\+\_\+domyslne} ()
+\begin{DoxyCompactList}\small\item\em funkcja ustawiajaca parametry domyslne samochodu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf przebieg}
+\begin{DoxyCompactList}\small\item\em $<$zmienna przechowujaca przebieg samochodu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&out, {\bf Samochod} \&samochod)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $<$$<$. \end{DoxyCompactList}\item 
+istream \& {\bf operator$>$$>$} (istream \&s, {\bf Samochod} \&samochod)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa \doxyref{Samochod}{str.}{class_samochod}, dziedziczy po klasie \doxyref{Srodek\+\_\+transportu}{str.}{class_srodek__transportu}. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Samochod@{Samochod}!Samochod@{Samochod}}
+\index{Samochod@{Samochod}!Samochod@{Samochod}}
+\subsubsection[{Samochod()}]{\setlength{\rightskip}{0pt plus 5cm}Samochod\+::\+Samochod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_samochod_a56ae27a3e568333f010604249d463c96}
+
+
+konstruktor domyslny 
+
+\index{Samochod@{Samochod}!````~Samochod@{$\sim$\+Samochod}}
+\index{````~Samochod@{$\sim$\+Samochod}!Samochod@{Samochod}}
+\subsubsection[{$\sim$\+Samochod()}]{\setlength{\rightskip}{0pt plus 5cm}Samochod\+::$\sim$\+Samochod (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_samochod_a5995c359256c60addb4b362c2797b37c}
+
+
+destruktor 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Samochod@{Samochod}!ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}}
+\index{ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}!Samochod@{Samochod}}
+\subsubsection[{ustaw\+\_\+domyslne()}]{\setlength{\rightskip}{0pt plus 5cm}void Samochod\+::ustaw\+\_\+domyslne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samochod_affb67e0cc339a6fe027a82703dc4c0e9}
+
+
+funkcja ustawiajaca parametry domyslne samochodu 
+
+
+
+Implementuje {\bf Srodek\+\_\+transportu} \doxyref{}{str.}{class_srodek__transportu_a001cdf92b562557afa60257d174d524b}.
+
+\index{Samochod@{Samochod}!wczytaj\+\_\+samochod@{wczytaj\+\_\+samochod}}
+\index{wczytaj\+\_\+samochod@{wczytaj\+\_\+samochod}!Samochod@{Samochod}}
+\subsubsection[{wczytaj\+\_\+samochod(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Samochod\+::wczytaj\+\_\+samochod (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_samochod_ae7dad1c2a66fb7a7605f3326f1008926}
+
+
+funkcja odczytu z pliku zmiennych z klasy samochod 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+\index{Samochod@{Samochod}!wypisz\+\_\+stan@{wypisz\+\_\+stan}}
+\index{wypisz\+\_\+stan@{wypisz\+\_\+stan}!Samochod@{Samochod}}
+\subsubsection[{wypisz\+\_\+stan()}]{\setlength{\rightskip}{0pt plus 5cm}void Samochod\+::wypisz\+\_\+stan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samochod_a45373f78f0764700a4eed0b34c300915}
+
+
+funkcja wypisujaca stan samochodu 
+
+
+
+Implementuje {\bf Srodek\+\_\+transportu} \doxyref{}{str.}{class_srodek__transportu_aed5cfb50e521972271e878d947d7cc5c}.
+
+\index{Samochod@{Samochod}!zapisz\+\_\+samochod@{zapisz\+\_\+samochod}}
+\index{zapisz\+\_\+samochod@{zapisz\+\_\+samochod}!Samochod@{Samochod}}
+\subsubsection[{zapisz\+\_\+samochod(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Samochod\+::zapisz\+\_\+samochod (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_samochod_a346bdce9104f655e7b3d9b58dbd56614}
+
+
+funkcja zapisu do pliku zmiennych z klasy samochod 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\index{Samochod@{Samochod}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Samochod@{Samochod}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Samochod} \&}]{samochod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_samochod_a48c7afb882b656c44f52e8a92c26a34b}
+
+
+Operator strumieniowy $<$$<$. 
+
+\index{Samochod@{Samochod}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Samochod@{Samochod}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{s, }
+\item[{{\bf Samochod} \&}]{samochod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_samochod_a2ee8222931a9b95803d5a280ebe8ee96}
+
+
+Operator strumieniowy $>$$>$ 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Samochod@{Samochod}!przebieg@{przebieg}}
+\index{przebieg@{przebieg}!Samochod@{Samochod}}
+\subsubsection[{przebieg}]{\setlength{\rightskip}{0pt plus 5cm}int Samochod\+::przebieg\hspace{0.3cm}{\ttfamily [protected]}}\label{class_samochod_ac49f2eb837bb3defec37f573bb39e059}
+
+
+$<$zmienna przechowujaca przebieg samochodu 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+{\bf samochod.\+h}\item 
+{\bf samochod.\+cpp}\end{DoxyCompactItemize}

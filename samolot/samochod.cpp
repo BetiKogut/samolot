@@ -11,7 +11,29 @@ Samochod::Samochod() {
 #endif
 	numer = 11111;
 	ilosc_miejsc = 5;
-	przebieg = 100000;
+	przebieg = 10000;
+}
+
+Samochod::Samochod(int miejsca, int ilosc_osob)
+{
+#ifdef _DEBUG  
+	cout << "Wywolano konstruktor zparametrem Samolot" << endl;
+#endif
+	if (ilosc_osob <= miejsca)
+	{
+		numer = 11111;
+		ilosc_miejsc = miejsca;
+		przebieg = 10000;
+
+		for (int i = 0; i < ilosc_osob; i++)
+		{
+			Pasazerowie pasazer;
+			wektor_pasazerow.push_back(pasazer);
+		}
+	}
+	else cout << "!Za duzo osob!" << endl;
+
+
 }
 
 

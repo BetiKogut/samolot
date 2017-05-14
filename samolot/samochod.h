@@ -4,16 +4,18 @@
 #include "srodek_transportu.h"
 
 using namespace std;
-///klasa samochod, dziedziczy po klasie srodek_transportu
+///Klasa Samochod, dziedziczy po klasie Srodek_transportu
 class Samochod : public Srodek_transportu
 {
 protected:
-	///zmienna przechowujaca przebieg samochodu
-	int przebieg;
+	
+	int przebieg;///< zmienna przechowujaca przebieg 
 
 public:
 	///konstruktor domyslny
 	Samochod();
+	///konstruktor z parametrem
+	Samochod(int miejsca, int ilosc_osob);
 	///destruktor
 	~Samochod();
 

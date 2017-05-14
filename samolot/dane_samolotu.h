@@ -8,9 +8,9 @@ using namespace std;
 ///klasa DaneSamolotu
 class DaneSamolotu {
 private:
-	///zmienna przechowujaca miejsce startu lotu
+	///<zmienna przechowujaca miejsce startu lotu
 	string start;
-	///zmienna przechowujaca miejsce ladowania
+	///<zmienna przechowujaca miejsce ladowania
 	string cel;
 
 public:
@@ -23,8 +23,9 @@ public:
 	void zwrocdane();
 	///metoda umozliwiajaca zmiane danych lotu
 	/**
-	Umozliwia ustawienie nowego miejsca startu i celu lotu
-	\param miejsce startu i miejsce celu lotu
+	umozliwia ustawienie nowego miejsca startu i celu lotu
+	\param nowystart to miejsce nowego startu lotu
+	\param nowycel to miejsce nowego celu lotu
 	\return nic nie zwraca
 	*/
 	void zmiendane(string nowystart, string nowycel);

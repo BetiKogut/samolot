@@ -8,14 +8,9 @@ using namespace std;
 ///klasa Pasazerowie
 class Pasazerowie {
 private:
-	///zmienna przechowujaca imie pasazera
-	string imie;
-	///zmienna przechowujaca nazwisko pasazera
-	string nazwisko;
-	///zmienna przechowujaca numer klasy w ktorej leci pasazer
-	int klasa;
-	///zmienna logiczna przechowujaca informacje czy pasazer posiada nadbagaz
-	bool nadbagaz;
+	string imie;///<zmienna przechowujaca imie pasazera
+	string nazwisko;	///<zmienna przechowujaca nazwisko pasazera
+	bool nadbagaz;///<zmienna logiczna przechowujaca informacje czy pasazer posiada nadbagaz
 
 public:
 	///konstruktor domyslny
@@ -33,7 +28,7 @@ public:
 	\return zwraca nazwisko pasazera
 	*/
 	string zwrocnazwisko();
-	///metoda wypisujaca lacznie imie i nazwisko
+	///metoda wypisujaca ³¹cznie imie i nazwisko
 	void calanazwa();
 	///metoda pozwalajaca na zmiane imienia
 	/**

@@ -1,0 +1,194 @@
+\section{Dokumentacja klasy Srodek\+\_\+transportu}
+\label{class_srodek__transportu}\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+
+
+Klasa abstrakcyjna \doxyref{Srodek\+\_\+transportu}{str.}{class_srodek__transportu}.  
+
+
+
+
+{\ttfamily \#include $<$srodek\+\_\+transportu.\+h$>$}
+
+Diagram dziedziczenia dla Srodek\+\_\+transportu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_srodek__transportu}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Srodek\+\_\+transportu} ()
+\begin{DoxyCompactList}\small\item\em Kontruktor domy渓ny. \end{DoxyCompactList}\item 
+virtual {\bf $\sim$\+Srodek\+\_\+transportu} ()
+\begin{DoxyCompactList}\small\item\em Destruktor wirtualny. \end{DoxyCompactList}\item 
+void {\bf zapisz\+\_\+srodek} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja zapisu do pliku zmiennych z klasy srodek\+\_\+transportu \end{DoxyCompactList}\item 
+void {\bf wczytaj\+\_\+srodek} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja odczytu z pliku zmiennych z klasy srodek\+\_\+transportu \end{DoxyCompactList}\item 
+virtual void {\bf wypisz\+\_\+stan} ()=0
+\begin{DoxyCompactList}\small\item\em metoda wirtualna wypisywania stanu \end{DoxyCompactList}\item 
+virtual void {\bf ustaw\+\_\+domyslne} ()=0
+\begin{DoxyCompactList}\small\item\em metoda wirtualna ustawiajaca domyslne dane \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf ilosc\+\_\+miejsc}
+\begin{DoxyCompactList}\small\item\em $<$zmienna przechowujaca ilosc miejsc w srodku transportu \end{DoxyCompactList}\item 
+int {\bf numer}
+\item 
+vector$<$ {\bf Pasazerowie} $>$ {\bf wektor\+\_\+pasazerow}
+\begin{DoxyCompactList}\small\item\em wektor przechowujacy pasazerow samolotu \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bf operator$<$$<$} (std\+::ostream \&s, {\bf Srodek\+\_\+transportu} \&srodek\+\_\+transportu)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $<$$<$. \end{DoxyCompactList}\item 
+std\+::istream \& {\bf operator$>$$>$} (std\+::istream \&s, {\bf Srodek\+\_\+transportu} \&srodek\+\_\+transportu)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczeg贸艂owy}
+Klasa abstrakcyjna \doxyref{Srodek\+\_\+transportu}{str.}{class_srodek__transportu}. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{Srodek\+\_\+transportu()}]{\setlength{\rightskip}{0pt plus 5cm}Srodek\+\_\+transportu\+::\+Srodek\+\_\+transportu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_srodek__transportu_a77b861f9178c4730afdf7491cc3d2d31}
+
+
+Kontruktor domy渓ny. 
+
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!````~Srodek\+\_\+transportu@{$\sim$\+Srodek\+\_\+transportu}}
+\index{````~Srodek\+\_\+transportu@{$\sim$\+Srodek\+\_\+transportu}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{$\sim$\+Srodek\+\_\+transportu()}]{\setlength{\rightskip}{0pt plus 5cm}Srodek\+\_\+transportu\+::$\sim$\+Srodek\+\_\+transportu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_srodek__transportu_a14765161cda06789c3261e9ef7e3f639}
+
+
+Destruktor wirtualny. 
+
+
+
+\subsection{Dokumentacja funkcji sk艂adowych}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}}
+\index{ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{ustaw\+\_\+domyslne()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Srodek\+\_\+transportu\+::ustaw\+\_\+domyslne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_srodek__transportu_a001cdf92b562557afa60257d174d524b}
+
+
+metoda wirtualna ustawiajaca domyslne dane 
+
+
+
+Implementowany w {\bf Samolot} \doxyref{}{str.}{class_samolot_a84b8eb2a9ac41911e311122973e8879f}, {\bf Samolot\+\_\+wojskowy} \doxyref{}{str.}{class_samolot__wojskowy_ac5d8f5a08e9c2edfea01130d21ccf326} i {\bf Samochod} \doxyref{}{str.}{class_samochod_affb67e0cc339a6fe027a82703dc4c0e9}.
+
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!wczytaj\+\_\+srodek@{wczytaj\+\_\+srodek}}
+\index{wczytaj\+\_\+srodek@{wczytaj\+\_\+srodek}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{wczytaj\+\_\+srodek(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Srodek\+\_\+transportu\+::wczytaj\+\_\+srodek (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_srodek__transportu_a0f8007748ab99f18d2bb6b1cb3f684ab}
+
+
+funkcja odczytu z pliku zmiennych z klasy srodek\+\_\+transportu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!wypisz\+\_\+stan@{wypisz\+\_\+stan}}
+\index{wypisz\+\_\+stan@{wypisz\+\_\+stan}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{wypisz\+\_\+stan()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Srodek\+\_\+transportu\+::wypisz\+\_\+stan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_srodek__transportu_aed5cfb50e521972271e878d947d7cc5c}
+
+
+metoda wirtualna wypisywania stanu 
+
+
+
+Implementowany w {\bf Samolot} \doxyref{}{str.}{class_samolot_a07e6de963f10b5cf7352967e736f6daa}, {\bf Samolot\+\_\+wojskowy} \doxyref{}{str.}{class_samolot__wojskowy_ae8670079824c05a6bbf6ba85ce13e17d} i {\bf Samochod} \doxyref{}{str.}{class_samochod_a45373f78f0764700a4eed0b34c300915}.
+
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!zapisz\+\_\+srodek@{zapisz\+\_\+srodek}}
+\index{zapisz\+\_\+srodek@{zapisz\+\_\+srodek}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{zapisz\+\_\+srodek(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Srodek\+\_\+transportu\+::zapisz\+\_\+srodek (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)}\label{class_srodek__transportu_a6a595208ccebdf6b64eb7be7ea4f0826}
+
+
+funkcja zapisu do pliku zmiennych z klasy srodek\+\_\+transportu 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja przyjaci贸艂 i funkcji zwi膮zanych}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{s, }
+\item[{{\bf Srodek\+\_\+transportu} \&}]{srodek\+\_\+transportu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_srodek__transportu_a03f7d6e2b1da2f66e09b3ee3bb086e1c}
+
+
+Operator strumieniowy $<$$<$. 
+
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{s, }
+\item[{{\bf Srodek\+\_\+transportu} \&}]{srodek\+\_\+transportu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_srodek__transportu_a0d7ca7f7dd615d2fab10c64f9155a428}
+
+
+Operator strumieniowy $>$$>$ 
+
+
+
+\subsection{Dokumentacja atrybut贸w sk艂adowych}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!ilosc\+\_\+miejsc@{ilosc\+\_\+miejsc}}
+\index{ilosc\+\_\+miejsc@{ilosc\+\_\+miejsc}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{ilosc\+\_\+miejsc}]{\setlength{\rightskip}{0pt plus 5cm}int Srodek\+\_\+transportu\+::ilosc\+\_\+miejsc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_srodek__transportu_abc206dbf871266b8a818b3338be71e81}
+
+
+$<$zmienna przechowujaca ilosc miejsc w srodku transportu 
+
+zmienna przechowujaca numer srodku transportu \index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!numer@{numer}}
+\index{numer@{numer}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{numer}]{\setlength{\rightskip}{0pt plus 5cm}int Srodek\+\_\+transportu\+::numer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_srodek__transportu_aff822a566bc2403d4d99a9155771f8bc}
+\index{Srodek\+\_\+transportu@{Srodek\+\_\+transportu}!wektor\+\_\+pasazerow@{wektor\+\_\+pasazerow}}
+\index{wektor\+\_\+pasazerow@{wektor\+\_\+pasazerow}!Srodek\+\_\+transportu@{Srodek\+\_\+transportu}}
+\subsubsection[{wektor\+\_\+pasazerow}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Pasazerowie}$>$ Srodek\+\_\+transportu\+::wektor\+\_\+pasazerow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_srodek__transportu_ae54b5f56778df51d0efd28bddebed26e}
+
+
+wektor przechowujacy pasazerow samolotu 
+
+
+
+Dokumentacja dla tej klasy zosta艂a wygenerowana z plik贸w\+:\begin{DoxyCompactItemize}
+\item 
+{\bf srodek\+\_\+transportu.\+h}\item 
+{\bf srodek\+\_\+transportu.\+cpp}\end{DoxyCompactItemize}

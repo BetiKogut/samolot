@@ -1,0 +1,202 @@
+\section{Dokumentacja klasy Pasazerowie}
+\label{class_pasazerowie}\index{Pasazerowie@{Pasazerowie}}
+
+
+klasa \doxyref{Pasazerowie}{str.}{class_pasazerowie}  
+
+
+
+
+{\ttfamily \#include $<$pasazerowie.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pasazerowie} ()
+\begin{DoxyCompactList}\small\item\em konstruktor domyslny \end{DoxyCompactList}\item 
+{\bf $\sim$\+Pasazerowie} ()
+\begin{DoxyCompactList}\small\item\em destruktor \end{DoxyCompactList}\item 
+string {\bf zwrocimie} ()
+\begin{DoxyCompactList}\small\item\em metoda zwracajaca imie \end{DoxyCompactList}\item 
+string {\bf zwrocnazwisko} ()
+\begin{DoxyCompactList}\small\item\em metoda zwracajaca nazwisko \end{DoxyCompactList}\item 
+void {\bf calanazwa} ()
+\begin{DoxyCompactList}\small\item\em metoda wypisujaca ��cznie imie i nazwisko \end{DoxyCompactList}\item 
+void {\bf zmienimie} (string noweimie)
+\begin{DoxyCompactList}\small\item\em metoda pozwalajaca na zmiane imienia \end{DoxyCompactList}\item 
+void {\bf zmiennazwisko} (string nowenazwisko)
+\begin{DoxyCompactList}\small\item\em metoda pozwalajaca na zmiane nazwiska \end{DoxyCompactList}\item 
+void {\bf zwrocnadbagaz} ()
+\begin{DoxyCompactList}\small\item\em metoda zwracajaca informacje czy pasazer posiada nadbagaz \end{DoxyCompactList}\item 
+void {\bf operator!} ()
+\begin{DoxyCompactList}\small\item\em przeciazony operator ! \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&out, {\bf Pasazerowie} \&pasazerowie)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $<$$<$. \end{DoxyCompactList}\item 
+istream \& {\bf operator$>$$>$} (istream \&s, {\bf Pasazerowie} \&pasazerowie)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa \doxyref{Pasazerowie}{str.}{class_pasazerowie} 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Pasazerowie@{Pasazerowie}!Pasazerowie@{Pasazerowie}}
+\index{Pasazerowie@{Pasazerowie}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{Pasazerowie()}]{\setlength{\rightskip}{0pt plus 5cm}Pasazerowie\+::\+Pasazerowie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a1389ee395e17bb6bb0794da800a31706}
+
+
+konstruktor domyslny 
+
+\index{Pasazerowie@{Pasazerowie}!````~Pasazerowie@{$\sim$\+Pasazerowie}}
+\index{````~Pasazerowie@{$\sim$\+Pasazerowie}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{$\sim$\+Pasazerowie()}]{\setlength{\rightskip}{0pt plus 5cm}Pasazerowie\+::$\sim$\+Pasazerowie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_ad655ce26cdb3b1ff72363ca0dbbb79d3}
+
+
+destruktor 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Pasazerowie@{Pasazerowie}!calanazwa@{calanazwa}}
+\index{calanazwa@{calanazwa}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{calanazwa()}]{\setlength{\rightskip}{0pt plus 5cm}void Pasazerowie\+::calanazwa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_ab9edddcbd33a81cf1574ccdcb4e61eb5}
+
+
+metoda wypisujaca ��cznie imie i nazwisko 
+
+\index{Pasazerowie@{Pasazerowie}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{operator"!()}]{\setlength{\rightskip}{0pt plus 5cm}void Pasazerowie\+::operator! (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a82b3004cb658596a226c94e21336afff}
+
+
+przeciazony operator ! 
+
+\index{Pasazerowie@{Pasazerowie}!zmienimie@{zmienimie}}
+\index{zmienimie@{zmienimie}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{zmienimie(string noweimie)}]{\setlength{\rightskip}{0pt plus 5cm}void Pasazerowie\+::zmienimie (
+\begin{DoxyParamCaption}
+\item[{string}]{noweimie}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a18547974c389d9c4e05a514195c293de}
+
+
+metoda pozwalajaca na zmiane imienia 
+
+
+\begin{DoxyParams}{Parametry}
+{\em noweimie} & to nowe imie pasazera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+nic nie zwraca 
+\end{DoxyReturn}
+\index{Pasazerowie@{Pasazerowie}!zmiennazwisko@{zmiennazwisko}}
+\index{zmiennazwisko@{zmiennazwisko}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{zmiennazwisko(string nowenazwisko)}]{\setlength{\rightskip}{0pt plus 5cm}void Pasazerowie\+::zmiennazwisko (
+\begin{DoxyParamCaption}
+\item[{string}]{nowenazwisko}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a13533bd4bc2fb36c11513cb5f71b686e}
+
+
+metoda pozwalajaca na zmiane nazwiska 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nowenazwisko} & to nowe nazwisko pasazera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+nic nie zwraca 
+\end{DoxyReturn}
+\index{Pasazerowie@{Pasazerowie}!zwrocimie@{zwrocimie}}
+\index{zwrocimie@{zwrocimie}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{zwrocimie()}]{\setlength{\rightskip}{0pt plus 5cm}string Pasazerowie\+::zwrocimie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a15bbfaafc3a7b7f473dd7cbbb2c41bef}
+
+
+metoda zwracajaca imie 
+
+\begin{DoxyReturn}{Zwraca}
+zwraca imie pasazera 
+\end{DoxyReturn}
+\index{Pasazerowie@{Pasazerowie}!zwrocnadbagaz@{zwrocnadbagaz}}
+\index{zwrocnadbagaz@{zwrocnadbagaz}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{zwrocnadbagaz()}]{\setlength{\rightskip}{0pt plus 5cm}void Pasazerowie\+::zwrocnadbagaz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_abf88517c867095015640c7faffdee03a}
+
+
+metoda zwracajaca informacje czy pasazer posiada nadbagaz 
+
+\index{Pasazerowie@{Pasazerowie}!zwrocnazwisko@{zwrocnazwisko}}
+\index{zwrocnazwisko@{zwrocnazwisko}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{zwrocnazwisko()}]{\setlength{\rightskip}{0pt plus 5cm}string Pasazerowie\+::zwrocnazwisko (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pasazerowie_a3367047420d01fe7ea90563054bb4227}
+
+
+metoda zwracajaca nazwisko 
+
+\begin{DoxyReturn}{Zwraca}
+zwraca nazwisko pasazera 
+\end{DoxyReturn}
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\index{Pasazerowie@{Pasazerowie}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Pasazerowie} \&}]{pasazerowie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_pasazerowie_a2450aa552025411d4775ec11a1d091d2}
+
+
+Operator strumieniowy $<$$<$. 
+
+\index{Pasazerowie@{Pasazerowie}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Pasazerowie@{Pasazerowie}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{s, }
+\item[{{\bf Pasazerowie} \&}]{pasazerowie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_pasazerowie_a42b7ff0865bca4ed3d43a45b68c7bcdd}
+
+
+Operator strumieniowy $>$$>$ 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+{\bf pasazerowie.\+h}\item 
+{\bf pasazerowie.\+cpp}\end{DoxyCompactItemize}

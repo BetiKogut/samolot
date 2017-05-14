@@ -17,10 +17,10 @@ protected:
 	Zaloga zaloga;
 	///Podklasa klasy samolot
 	DaneSamolotu daneSamolotu;
-	///zmienna przechowujaca liczbe stworzonych obiektow samolot
-	static int liczba_obiektow;
-	///zmienna przechowujaca maksymalna wysokosc lotu
-	float max_wysokosc;
+
+	static int liczba_obiektow;///<zmienna przechowujaca liczbe stworzonych obiektow samolot
+
+	float max_wysokosc;	///<zmienna przechowujaca maksymalna wysokosc lotu
 
 public:
 	///konstruktor domyslny

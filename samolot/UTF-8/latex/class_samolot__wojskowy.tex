@@ -1,0 +1,205 @@
+\section{Dokumentacja klasy Samolot\+\_\+wojskowy}
+\label{class_samolot__wojskowy}\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+
+
+Klasa \doxyref{Samolot\+\_\+wojskowy}{str.}{class_samolot__wojskowy}, dziedziczy po klasie \doxyref{Samolot}{str.}{class_samolot}.  
+
+
+
+
+{\ttfamily \#include $<$samolot\+\_\+wojskowy.\+h$>$}
+
+Diagram dziedziczenia dla Samolot\+\_\+wojskowy\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_samolot__wojskowy}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Samolot\+\_\+wojskowy} ()
+\begin{DoxyCompactList}\small\item\em konstruktor domyslny \end{DoxyCompactList}\item 
+{\bf Samolot\+\_\+wojskowy} (int miejsca, int ilosc\+\_\+osob, float max\+\_\+wys)
+\begin{DoxyCompactList}\small\item\em konstruktor z parametrami \end{DoxyCompactList}\item 
+{\bf $\sim$\+Samolot\+\_\+wojskowy} ()
+\begin{DoxyCompactList}\small\item\em destruktor \end{DoxyCompactList}\item 
+virtual void {\bf zapisz\+\_\+samolot\+\_\+wojskowy} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja zapisu do pliku zmiennych z klasy samolot\+\_\+wojskowy \end{DoxyCompactList}\item 
+virtual void {\bf wczytaj\+\_\+samolot\+\_\+wojskowy} (string nazwa)
+\begin{DoxyCompactList}\small\item\em funkcja odczytu z pliku zmiennych z klasy samolot\+\_\+wojskowy \end{DoxyCompactList}\item 
+void {\bf wypisz\+\_\+stan} ()
+\begin{DoxyCompactList}\small\item\em funkcja wypisujaca stan samolotu wojskowego \end{DoxyCompactList}\item 
+void {\bf ustaw\+\_\+domyslne} ()
+\begin{DoxyCompactList}\small\item\em funkcja ustawiajaca domyslne parametry samolotu wojskowego \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf ilosc\+\_\+broni}
+\begin{DoxyCompactList}\small\item\em zmienna przechowujaca ilosc broni \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&out, {\bf Samolot\+\_\+wojskowy} \&samolot\+\_\+wojskowy)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $<$$<$. \end{DoxyCompactList}\item 
+istream \& {\bf operator$>$$>$} (istream \&s, {\bf Samolot\+\_\+wojskowy} \&samolot\+\_\+wojskowy)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Dodatkowe Dziedziczone Składowe}
+
+
+\subsection{Opis szczegółowy}
+Klasa \doxyref{Samolot\+\_\+wojskowy}{str.}{class_samolot__wojskowy}, dziedziczy po klasie \doxyref{Samolot}{str.}{class_samolot}. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{Samolot\+\_\+wojskowy()}]{\setlength{\rightskip}{0pt plus 5cm}Samolot\+\_\+wojskowy\+::\+Samolot\+\_\+wojskowy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_samolot__wojskowy_a886087627b6a64435f437bd32045d150}
+
+
+konstruktor domyslny 
+
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{Samolot\+\_\+wojskowy(int miejsca, int ilosc\+\_\+osob, float max\+\_\+wys)}]{\setlength{\rightskip}{0pt plus 5cm}Samolot\+\_\+wojskowy\+::\+Samolot\+\_\+wojskowy (
+\begin{DoxyParamCaption}
+\item[{int}]{miejsca, }
+\item[{int}]{ilosc\+\_\+osob, }
+\item[{float}]{max\+\_\+wys}
+\end{DoxyParamCaption}
+)}\label{class_samolot__wojskowy_ade2a6e873fbfc9b2800bfdab873a4f79}
+
+
+konstruktor z parametrami 
+
+Umozliwia ustawienie ilosci miejsc, ilosci pasazerow i maksymalna wysokosc 
+\begin{DoxyParams}{Parametry}
+{\em miejsca} & to ilosc miejsc w samolocie \\
+\hline
+{\em ilosc\+\_\+osob} & jest liczba pasazerow \\
+\hline
+{\em max\+\_\+wys} & jest maksymalna wysokoscia lotu \\
+\hline
+\end{DoxyParams}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!````~Samolot\+\_\+wojskowy@{$\sim$\+Samolot\+\_\+wojskowy}}
+\index{````~Samolot\+\_\+wojskowy@{$\sim$\+Samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{$\sim$\+Samolot\+\_\+wojskowy()}]{\setlength{\rightskip}{0pt plus 5cm}Samolot\+\_\+wojskowy\+::$\sim$\+Samolot\+\_\+wojskowy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_samolot__wojskowy_aa6be8184e84e064c05fd8e1b8faa996e}
+
+
+destruktor 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}}
+\index{ustaw\+\_\+domyslne@{ustaw\+\_\+domyslne}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{ustaw\+\_\+domyslne()}]{\setlength{\rightskip}{0pt plus 5cm}void Samolot\+\_\+wojskowy\+::ustaw\+\_\+domyslne (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samolot__wojskowy_ac5d8f5a08e9c2edfea01130d21ccf326}
+
+
+funkcja ustawiajaca domyslne parametry samolotu wojskowego 
+
+
+
+Reimplementowana z {\bf Samolot} \doxyref{}{str.}{class_samolot_a84b8eb2a9ac41911e311122973e8879f}.
+
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!wczytaj\+\_\+samolot\+\_\+wojskowy@{wczytaj\+\_\+samolot\+\_\+wojskowy}}
+\index{wczytaj\+\_\+samolot\+\_\+wojskowy@{wczytaj\+\_\+samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{wczytaj\+\_\+samolot\+\_\+wojskowy(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Samolot\+\_\+wojskowy\+::wczytaj\+\_\+samolot\+\_\+wojskowy (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samolot__wojskowy_a3e4db07ff7f911a33a381c36e9a8af0b}
+
+
+funkcja odczytu z pliku zmiennych z klasy samolot\+\_\+wojskowy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!wypisz\+\_\+stan@{wypisz\+\_\+stan}}
+\index{wypisz\+\_\+stan@{wypisz\+\_\+stan}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{wypisz\+\_\+stan()}]{\setlength{\rightskip}{0pt plus 5cm}void Samolot\+\_\+wojskowy\+::wypisz\+\_\+stan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samolot__wojskowy_ae8670079824c05a6bbf6ba85ce13e17d}
+
+
+funkcja wypisujaca stan samolotu wojskowego 
+
+
+
+Reimplementowana z {\bf Samolot} \doxyref{}{str.}{class_samolot_a07e6de963f10b5cf7352967e736f6daa}.
+
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!zapisz\+\_\+samolot\+\_\+wojskowy@{zapisz\+\_\+samolot\+\_\+wojskowy}}
+\index{zapisz\+\_\+samolot\+\_\+wojskowy@{zapisz\+\_\+samolot\+\_\+wojskowy}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{zapisz\+\_\+samolot\+\_\+wojskowy(string nazwa)}]{\setlength{\rightskip}{0pt plus 5cm}void Samolot\+\_\+wojskowy\+::zapisz\+\_\+samolot\+\_\+wojskowy (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_samolot__wojskowy_a289bd9e9c2ac172b2334ec41f1bc8d19}
+
+
+funkcja zapisu do pliku zmiennych z klasy samolot\+\_\+wojskowy 
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & to nazwa pliku txt \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Samolot\+\_\+wojskowy} \&}]{samolot\+\_\+wojskowy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_samolot__wojskowy_a1d0842843c197c48818fe3c3ddf41e8f}
+
+
+Operator strumieniowy $<$$<$. 
+
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{s, }
+\item[{{\bf Samolot\+\_\+wojskowy} \&}]{samolot\+\_\+wojskowy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_samolot__wojskowy_a703149017c7177b20bf4d47765ba7e58}
+
+
+Operator strumieniowy $>$$>$ 
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\index{Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}!ilosc\+\_\+broni@{ilosc\+\_\+broni}}
+\index{ilosc\+\_\+broni@{ilosc\+\_\+broni}!Samolot\+\_\+wojskowy@{Samolot\+\_\+wojskowy}}
+\subsubsection[{ilosc\+\_\+broni}]{\setlength{\rightskip}{0pt plus 5cm}int Samolot\+\_\+wojskowy\+::ilosc\+\_\+broni\hspace{0.3cm}{\ttfamily [protected]}}\label{class_samolot__wojskowy_a149e94bdc74aca4a9c2c04996a32d855}
+
+
+zmienna przechowujaca ilosc broni 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+{\bf samolot\+\_\+wojskowy.\+h}\item 
+{\bf samolot\+\_\+wojskowy.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\section{Dokumentacja klasy Dane\+Samolotu}
+\label{class_dane_samolotu}\index{Dane\+Samolotu@{Dane\+Samolotu}}
+
+
+klasa \doxyref{Dane\+Samolotu}{str.}{class_dane_samolotu}  
+
+
+
+
+{\ttfamily \#include $<$dane\+\_\+samolotu.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Dane\+Samolotu} ()
+\begin{DoxyCompactList}\small\item\em konstruktor domyslny \end{DoxyCompactList}\item 
+{\bf $\sim$\+Dane\+Samolotu} ()
+\begin{DoxyCompactList}\small\item\em destruktor \end{DoxyCompactList}\item 
+void {\bf zwrocdane} ()
+\begin{DoxyCompactList}\small\item\em metoda zwracajace start i cel lotu \end{DoxyCompactList}\item 
+void {\bf zmiendane} (string nowystart, string nowycel)
+\begin{DoxyCompactList}\small\item\em metoda umozliwiajaca zmiane danych lotu \end{DoxyCompactList}\item 
+{\bf Dane\+Samolotu} \& {\bf operator=} (const {\bf Dane\+Samolotu} \&dane)
+\begin{DoxyCompactList}\small\item\em przeciazony operator = \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Przyjaciele}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& {\bf operator$<$$<$} (ostream \&out, {\bf Dane\+Samolotu} \&dane)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $<$$<$. \end{DoxyCompactList}\item 
+istream \& {\bf operator$>$$>$} (istream \&s, {\bf Dane\+Samolotu} \&dane)
+\begin{DoxyCompactList}\small\item\em Operator strumieniowy $>$$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+klasa \doxyref{Dane\+Samolotu}{str.}{class_dane_samolotu} 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\index{Dane\+Samolotu@{Dane\+Samolotu}!Dane\+Samolotu@{Dane\+Samolotu}}
+\index{Dane\+Samolotu@{Dane\+Samolotu}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{Dane\+Samolotu()}]{\setlength{\rightskip}{0pt plus 5cm}Dane\+Samolotu\+::\+Dane\+Samolotu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dane_samolotu_a884d0e9aa3ee5c89f67fea4d765f485c}
+
+
+konstruktor domyslny 
+
+\index{Dane\+Samolotu@{Dane\+Samolotu}!````~Dane\+Samolotu@{$\sim$\+Dane\+Samolotu}}
+\index{````~Dane\+Samolotu@{$\sim$\+Dane\+Samolotu}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{$\sim$\+Dane\+Samolotu()}]{\setlength{\rightskip}{0pt plus 5cm}Dane\+Samolotu\+::$\sim$\+Dane\+Samolotu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dane_samolotu_ad11362e0176afdcad05918f7525af4ec}
+
+
+destruktor 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\index{Dane\+Samolotu@{Dane\+Samolotu}!operator=@{operator=}}
+\index{operator=@{operator=}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{operator=(const Dane\+Samolotu \&dane)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dane\+Samolotu} \& Dane\+Samolotu\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dane\+Samolotu} \&}]{dane}
+\end{DoxyParamCaption}
+)}\label{class_dane_samolotu_af79dbd14f7579abf44221ebdc5d629fd}
+
+
+przeciazony operator = 
+
+\index{Dane\+Samolotu@{Dane\+Samolotu}!zmiendane@{zmiendane}}
+\index{zmiendane@{zmiendane}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{zmiendane(string nowystart, string nowycel)}]{\setlength{\rightskip}{0pt plus 5cm}void Dane\+Samolotu\+::zmiendane (
+\begin{DoxyParamCaption}
+\item[{string}]{nowystart, }
+\item[{string}]{nowycel}
+\end{DoxyParamCaption}
+)}\label{class_dane_samolotu_a83409c2502884bb0f87dd70eb2ea60d9}
+
+
+metoda umozliwiajaca zmiane danych lotu 
+
+umozliwia ustawienie nowego miejsca startu i celu lotu 
+\begin{DoxyParams}{Parametry}
+{\em nowystart} & to miejsce nowego startu lotu \\
+\hline
+{\em nowycel} & to miejsce nowego celu lotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+nic nie zwraca 
+\end{DoxyReturn}
+\index{Dane\+Samolotu@{Dane\+Samolotu}!zwrocdane@{zwrocdane}}
+\index{zwrocdane@{zwrocdane}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{zwrocdane()}]{\setlength{\rightskip}{0pt plus 5cm}void Dane\+Samolotu\+::zwrocdane (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_dane_samolotu_a2dfa2684ef2b7b6228e730924f90d2dd}
+
+
+metoda zwracajace start i cel lotu 
+
+
+
+\subsection{Dokumentacja przyjaciół i funkcji związanych}
+\index{Dane\+Samolotu@{Dane\+Samolotu}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Dane\+Samolotu} \&}]{dane}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dane_samolotu_aaaf6a3db89522d407cf92091a98c2e80}
+
+
+Operator strumieniowy $<$$<$. 
+
+\index{Dane\+Samolotu@{Dane\+Samolotu}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Dane\+Samolotu@{Dane\+Samolotu}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{s, }
+\item[{{\bf Dane\+Samolotu} \&}]{dane}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{class_dane_samolotu_ae1a66a9e4246344008e3874910e3045d}
+
+
+Operator strumieniowy $>$$>$ 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+{\bf dane\+\_\+samolotu.\+h}\item 
+{\bf dane\+\_\+samolotu.\+cpp}\end{DoxyCompactItemize}

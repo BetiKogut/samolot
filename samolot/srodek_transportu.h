@@ -6,13 +6,13 @@
 
 using namespace std;
 
-///Klasa abstrakcyjna
+///Klasa abstrakcyjna Srodek_transportu
 class Srodek_transportu {
 
 protected:
-	///zmienna przechowujaca ilosc miejsc w srodku transportu
+	///<zmienna przechowujaca ilosc miejsc w srodku transportu
 	int ilosc_miejsc;
-	///zmienna przechowujaca numer srodku transportu
+	///<zmienna przechowujaca numer srodku transportu
 	int numer;
 	///wektor przechowujacy pasazerow samolotu
 	vector <Pasazerowie> wektor_pasazerow;

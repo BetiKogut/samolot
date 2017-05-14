@@ -12,7 +12,9 @@ Srodek_transportu :: Srodek_transportu() {
 	
 }
 
-ostream& operator << (ostream &out, Srodek_transportu &srodek_transportu) {
+ostream& operator << (ostream &out, Srodek_transportu &srodek_transportu) 
+{
+	out << srodek_transportu.wektor_pasazerow.size() << endl;
 	for (int i = 0; i < srodek_transportu.wektor_pasazerow.size(); i++)
 	{
 		out << srodek_transportu.wektor_pasazerow[i];
@@ -21,10 +23,18 @@ ostream& operator << (ostream &out, Srodek_transportu &srodek_transportu) {
 	return out;
 }
 
-istream& operator >> (istream& s, Srodek_transportu &srodek_transportu) {
-	for (int i = 0; i < srodek_transportu.wektor_pasazerow.size(); i++)
+istream& operator >> (istream& s, Srodek_transportu &srodek_transportu) 
+{
+	int size;
+	string imie,nazwisko;
+	s >> size;
+	srodek_transportu.wektor_pasazerow.clear();
+	for (int i = 0; i < size; i++)
 	{
-		s >> srodek_transportu.wektor_pasazerow[i];
+		Pasazerowie pasazer;
+		s >> pasazer;
+		srodek_transportu.wektor_pasazerow.push_back(pasazer);
+
 	}
 	s >> srodek_transportu.numer >> srodek_transportu.ilosc_miejsc;
 	return s;

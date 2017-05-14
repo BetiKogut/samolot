@@ -4,12 +4,11 @@
 #include "samolot.h"
 
 using namespace std;
-///klasa Samolot_wojskowy, dziedziczy po klasie samolot
+///Klasa Samolot_wojskowy, dziedziczy po klasie Samolot
 class Samolot_wojskowy : public Samolot
 {
 protected:
-	///zmienna przechowujaca ilosc broni
-	int ilosc_broni;
+	int ilosc_broni; ///<zmienna przechowujaca ilosc broni
 
 public:
 	///konstruktor domyslny

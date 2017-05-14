@@ -8,8 +8,7 @@ using namespace std;
 ///Klasa Zaloga
 class Zaloga {
 private:
-	///mienna przechowujaca numer id pilota
-	int pilot_id;
+	int pilot_id;///<mienna przechowujaca numer id pilota
 
 public:
 	///konstruktor domyslny

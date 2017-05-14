@@ -128,7 +128,6 @@ int main()
 {
 	int przycisk = 0;
 	int opcja=0;
-	//string imie, nazwisko;
 
 	Samolot samolot1(20,3);
 	Samolot_wojskowy wojskowy1(15,2,12);
