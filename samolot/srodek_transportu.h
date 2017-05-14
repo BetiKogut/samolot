@@ -36,6 +36,8 @@ public:
 	void wczytaj_srodek(string nazwa);
 	///metoda wirtualna wypisywania stanu
 	virtual void wypisz_stan()=0;
+	///metoda wirtualna ustawiajaca domyslne dane
+	virtual void ustaw_domyslne()=0;
 
 	///Operator strumieniowy <<
 	friend std::ostream& operator << (std::ostream &s, Srodek_transportu &srodek_transportu);

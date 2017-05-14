@@ -158,7 +158,7 @@ int main()
 		cout << "[3] Testy odczytu z pliku" << endl;
 		cout << "[4] Testy polimorfizmu na konstruktorach i destruktorach"<< endl;
 		cout << "[5] Testy polimorfizm z uzyciem tablicy wskaznikow na obiekty klasy podstawowej" << endl;
-		cout << "[6] Test funkcji wirtualnej wypisz_stan" << endl;
+		cout << "[6] Test funkcji wirtualnych" << endl;
 
 
 		cin.exceptions(ifstream::failbit | ifstream::badbit);
@@ -167,7 +167,7 @@ int main()
 			try
 			{
 				cin >> opcja;
-				if(opcja < 0 || opcja > 4)
+				if(opcja < 0 || opcja > 6)
 					cout << "!Bledne dane!" << endl;
 			}
 			catch (ifstream::failure)
@@ -177,7 +177,7 @@ int main()
 				cin.ignore(100, '\n');
 			}
 			
-		} while (opcja < 0 || opcja > 5);
+		} while (opcja < 0 || opcja > 6);
 
 
 		switch (opcja)
@@ -232,11 +232,44 @@ int main()
 
 		case 6:
 			system("cls");
-			for (int i = 0; i < 3; i++)
+			cout << "[1] Test funkcji wypisz_stan" << endl;
+			cout << "[2] Test funkcji ustaw_domyslne" << endl;
+
+			cin.exceptions(ifstream::failbit | ifstream::badbit);
+			do
 			{
-				obiekt[i]->wypisz_stan();
+				try
+				{
+					cin >> opcja;
+					if (opcja < 0 || opcja > 2)
+						cout << "!Bledne dane!" << endl;
+				}
+				catch (ifstream::failure)
+				{
+					cout << "!Bledne dane!" << endl;
+					cin.clear();
+					cin.ignore(100, '\n');
+				}
+
+			} while (opcja < 0 || opcja > 2);
+
+			if(opcja==1)
+			{ 
+				for (int i = 0; i < 3; i++)
+				{
+					obiekt[i]->wypisz_stan();
+				}
 			}
-			break;
+
+			else
+			{ 
+				for (int i = 0; i < 3; i++)
+				{
+					obiekt[i]->ustaw_domyslne();
+				}
+				break;
+			}
+
 			 
 		}
 	} while (opcja != 0);

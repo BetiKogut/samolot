@@ -9,7 +9,7 @@ Samochod::Samochod() {
 #ifdef _DEBUG  
 	cout << "Wywolano domyslny konstruktor Samochod" << endl;
 #endif
-	numer = 2345;
+	numer = 11111;
 	ilosc_miejsc = 5;
 	przebieg = 100000;
 }
@@ -69,8 +69,21 @@ void Samochod::wczytaj_samochod(string nazwa) {
 
 void Samochod :: wypisz_stan()
 {
-	cout << "Uruchomiono funkcje wypisz z klasy samochod:" << endl;
+	cout << endl << "Uruchomiono funkcje wypisz z klasy samochod:" << endl;
 	cout << (*this);
+}
+
+void Samochod::ustaw_domyslne()
+{
+	cout << endl << "Uruchomiono funkcje ustaw_domyslne z klasy samochod" << endl;
+	numer = 11111;
+	ilosc_miejsc = 5;
+	przebieg = 100000;
+	for (int i = 0; i < wektor_pasazerow.size(); i++)
+	{
+		wektor_pasazerow[i].zmienimie("Domyslne_imie");
+		wektor_pasazerow[i].zmiennazwisko("Domyslne_nazwisko");
+	}
 }
 
 Samochod :: ~Samochod()

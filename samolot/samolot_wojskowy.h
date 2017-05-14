@@ -37,6 +37,8 @@ public:
 	virtual void wczytaj_samolot_wojskowy(string nazwa);
 	///funkcja wypisujaca stan samolotu wojskowego
 	void wypisz_stan();
+	///funkcja ustawiajaca domyslne parametry samolotu wojskowego
+	void ustaw_domyslne();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samolot_wojskowy& samolot_wojskowy);

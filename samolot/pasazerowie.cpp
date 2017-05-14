@@ -69,8 +69,6 @@ istream& operator >> (istream& s, Pasazerowie &pasazerowie)
 }
 
 
-
-//destruktor
 Pasazerowie::~Pasazerowie()
 {
 #ifdef _DEBUG

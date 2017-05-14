@@ -58,6 +58,8 @@ public:
 	void wczytaj_samolot(string nazwa);
 	///funkcja wypisujaca stan samolotu
 	virtual void wypisz_stan();
+	///funkcja wirtualna ustawiajaca parametry domyslne samolotu
+	virtual void ustaw_domyslne();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samolot& samolot);

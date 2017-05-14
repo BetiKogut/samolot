@@ -15,9 +15,9 @@ Samolot::Samolot()
 	cout << "Wywolano konstruktor Samolot" << endl;
 #endif
 	liczba_obiektow++;
-	numer = 0;
-	ilosc_miejsc = 0;
-	max_wysokosc = 0;
+	numer = 11111;
+	ilosc_miejsc = 100;
+	max_wysokosc = 10;
 
 }
 
@@ -196,12 +196,24 @@ void Samolot::wczytaj_samolot(string nazwa) {
 
 void Samolot::wypisz_stan()
 {	
-	cout << "Uruchomiono funkcje wypisz z klasy samolot" << endl;
+	cout << endl << "Uruchomiono funkcje wypisz z klasy samolot" << endl;
 	cout << (*this);
 }
 
+void Samolot::ustaw_domyslne()
+{
+	cout << endl << "Uruchomiono funkcje ustaw_domyslne z klasy samolot" << endl;
+	numer = 11111;
+	ilosc_miejsc = 100;
+	max_wysokosc = 10;
+	for (int i = 0; i < wektor_pasazerow.size(); i++)
+	{
+		wektor_pasazerow[i].zmienimie("Domyslne_imie");
+		wektor_pasazerow[i].zmiennazwisko("Domyslne_nazwisko");
+	}
+}
 
-//destruktor
+
 Samolot::~Samolot()
 {
 #ifdef _DEBUG

@@ -29,6 +29,8 @@ public:
 	void wczytaj_samochod(string nazwa);
 	///funkcja wypisujaca stan samochodu
 	virtual void wypisz_stan();
+	///funkcja ustawiajaca parametry domyslne samochodu
+	virtual void ustaw_domyslne();
 
 	///Operator strumieniowy <<
 	friend ostream& operator << (ostream& out, Samochod& samochod);

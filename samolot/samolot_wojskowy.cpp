@@ -11,9 +11,9 @@ Samolot_wojskowy::Samolot_wojskowy()
 #ifdef _DEBUG  
 	cout << "Wywolano domyslny konstruktor Samolot_wojskowy" << endl;
 #endif
-	numer = 3456;
-	ilosc_miejsc = 2;
-	ilosc_broni = 1200;
+	numer = 11111;
+	ilosc_miejsc = 100;
+	ilosc_broni = 100;
 	
 }
 
@@ -76,8 +76,22 @@ void Samolot_wojskowy::wczytaj_samolot_wojskowy(string nazwa)
 
 void Samolot_wojskowy::wypisz_stan()
 {
-	cout << "Uruchomiono funkcje wypisz z klasy Samolot_wojskowy" << endl;
+	cout << endl << "Uruchomiono funkcje wypisz z klasy Samolot_wojskowy" << endl;
 	cout << (*this);
+}
+
+void Samolot_wojskowy::ustaw_domyslne()
+{
+	cout << endl << "Uruchomiono funkcje ustaw_domyslne z klasy samolot_wojskowy" << endl;
+	numer = 11111;
+	ilosc_miejsc = 100;
+	max_wysokosc = 10;
+	ilosc_broni = 100;
+	for (int i = 0; i < wektor_pasazerow.size(); i++)
+	{
+		wektor_pasazerow[i].zmienimie("Domyslne_imie");
+		wektor_pasazerow[i].zmiennazwisko("Domyslne_nazwisko");
+	}
 }
 
 
