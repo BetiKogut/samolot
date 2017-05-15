@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['samochod',['Samochod',['../class_samochod.html',1,'Samochod'],['../class_samochod.html#a56ae27a3e568333f010604249d463c96',1,'Samochod::Samochod()']]],
+  ['samochod',['Samochod',['../class_samochod.html',1,'Samochod'],['../class_samochod.html#a56ae27a3e568333f010604249d463c96',1,'Samochod::Samochod()'],['../class_samochod.html#ae75a24b3abb85b450ccd2575cd49d0c4',1,'Samochod::Samochod(int miejsca, int ilosc_osob)']]],
   ['samochod_2ecpp',['samochod.cpp',['../samochod_8cpp.html',1,'']]],
   ['samochod_2eh',['samochod.h',['../samochod_8h.html',1,'']]],
   ['samolot',['Samolot',['../class_samolot.html',1,'Samolot'],['../class_samolot.html#a2ea7a62bbd29cd96ad47e432b1070261',1,'Samolot::Samolot()'],['../class_samolot.html#ad48926e9657e95cf21451ea8b8b7ae08',1,'Samolot::Samolot(int miejsca, int ilosc_osob)'],['../class_samolot.html#a24a5edc6130e7d769e4cb0a095dc321f',1,'Samolot::Samolot(Samolot &amp;samolot)']]],

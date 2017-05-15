@@ -26,7 +26,6 @@ ostream& operator << (ostream &out, Srodek_transportu &srodek_transportu)
 istream& operator >> (istream& s, Srodek_transportu &srodek_transportu) 
 {
 	int size;
-	string imie,nazwisko;
 	s >> size;
 	srodek_transportu.wektor_pasazerow.clear();
 	for (int i = 0; i < size; i++)
@@ -40,25 +39,46 @@ istream& operator >> (istream& s, Srodek_transportu &srodek_transportu)
 	return s;
 }
 
-void Srodek_transportu::zapisz_srodek(string nazwa) {
+void Srodek_transportu::zapisz_srodek(string nazwa) 
+{
+	ofstream plik;
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
+	{
+		plik.open(nazwa);
+	}
+	catch (ifstream::failure)
+	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
 #ifdef _DEBUG  
 	cout << "Zapisano dane Srodek" << endl;
 #endif
-	ofstream plik(nazwa);
 	plik << *this;
 	plik.close();
-
 }
 
-void Srodek_transportu::wczytaj_srodek(string nazwa) {
+void Srodek_transportu::wczytaj_srodek(string nazwa) 
+	{
+		ifstream plik;
+		plik.exceptions(ifstream::failbit | ifstream::badbit);
+		try
+		{
+			plik.open(nazwa);
+		}
+		catch (ifstream::failure)
+		{
+			cout << "!nie mozna otworzyc pliku!" << endl;
+			return;
+		}
 #ifdef _DEBUG  
-	cout << "Wczytano obiekt Srodek" << endl;
+		cout << "Wczytano dane Srodek" << endl;
 #endif
-	fstream plik(nazwa);
-	plik >> *this;
-	plik.close();
+		plik >> *this;
+		plik.close();
+	}
 
-}
 
 Srodek_transportu :: ~Srodek_transportu()
 {

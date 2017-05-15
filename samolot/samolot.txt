@@ -1,7 +1,6 @@
-3
-Domyslne_imie Domyslne_nazwisko
-Domyslne_imie Domyslne_nazwisko
-Domyslne_imie Domyslne_nazwisko
-123456
-20
-10
+2
+Adam Abacki
+Anna Kowalska
+555555
+40
+11

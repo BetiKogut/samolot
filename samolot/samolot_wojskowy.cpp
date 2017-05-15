@@ -28,10 +28,9 @@ Samolot_wojskowy::Samolot_wojskowy(int miejsca, int ilosc_osob, float max_wys)
 		ilosc_miejsc = miejsca;
 		max_wysokosc = max_wys;
 		ilosc_broni = 100;
-
+		Pasazerowie pasazer;
 		for (int i = 0; i < ilosc_osob; i++)
 		{
-			Pasazerowie pasazer;
 			wektor_pasazerow.push_back(pasazer);
 		}
 	}
@@ -41,38 +40,43 @@ Samolot_wojskowy::Samolot_wojskowy(int miejsca, int ilosc_osob, float max_wys)
 void Samolot_wojskowy::zapisz_samolot_wojskowy(string nazwa) 
 {
 	ofstream plik;
-	plik.open(nazwa);
-	if (!plik)
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
 	{
-		cout << "!nie mozna utworzyc pliku!";
+		plik.open(nazwa);
 	}
-	else
-
+	catch (ifstream::failure)
 	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
 #ifdef _DEBUG  
-		cout << "Zapisano dane Samolot_wojskowy" << endl;
+	cout << "Zapisano dane Samolot_wojskowy" << endl;
 #endif
-		plik << *this;
-		plik.close();
-	}
+	plik << *this;
+	plik.close();
 }
 
 void Samolot_wojskowy::wczytaj_samolot_wojskowy(string nazwa) 
 {
 	ifstream plik;
-	plik.open(nazwa);
-	if (!plik)
-		cout << "!nie mozna otworzyc pliku!";
-	else
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
 	{
-#ifdef _DEBUG  
-		cout << "Wczytano obiekt Samolot_wojskowy" << endl;
-#endif
-		plik >> *this;
-		plik.close();
+		plik.open(nazwa);
 	}
-
+	catch (ifstream::failure)
+	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
+#ifdef _DEBUG  
+	cout << "Wczytano dane Samolot_wojskowy" << endl;
+#endif
+	plik >> *this;
+	plik.close();
 }
+
 
 void Samolot_wojskowy::wypisz_stan()
 {

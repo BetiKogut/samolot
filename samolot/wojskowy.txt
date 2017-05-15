@@ -1,7 +1,8 @@
-2
-Domyslne_imie Domyslne_nazwisko
-Domyslne_imie Domyslne_nazwisko
-123456
-15
+3
+Karol Nowakowski
+Andrzej Klos
+Anna Abacka
+999999
+60
 12
-100
+500

@@ -54,40 +54,43 @@ istream& operator >> (istream& s, Samochod &samochod)
 void Samochod::zapisz_samochod(string nazwa) 
 {
 	ofstream plik;
-	plik.open(nazwa);
-	if (!plik)
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
 	{
-		cout << "!nie mozna utworzyc pliku!";
+		plik.open(nazwa);
 	}
-	else
-
+	catch (ifstream::failure)
 	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
 #ifdef _DEBUG  
-		cout << "Zapisano dane Samochod" << endl;
+	cout << "Zapisano dane Samochod" << endl;
 #endif
-		plik << *this;
-		plik.close();
-	}
-
+	plik << *this;
+	plik.close();
 }
 
-void Samochod::wczytaj_samochod(string nazwa) {
-
+void Samochod::wczytaj_samochod(string nazwa) 
+{
 	ifstream plik;
-	plik.open(nazwa);
-	if(!plik)
-		cout << "!nie mozna otworzyc pliku!";
-	else
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
 	{
-		#ifdef _DEBUG  
-		cout << "Wczytano obiekt Samochod" << endl;
-		#endif
-		plik >> *this;
-		plik.close();
-
+		plik.open(nazwa);
 	}
-
+	catch (ifstream::failure)
+	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
+#ifdef _DEBUG  
+	cout << "Wczytano dane Samochod" << endl;
+#endif
+	plik >> *this;
+	plik.close();
 }
+
 
 void Samochod :: wypisz_stan()
 {

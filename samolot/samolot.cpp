@@ -160,38 +160,41 @@ Samolot::operator int() const
 void Samolot::zapisz_samolot(string nazwa) 
 {
 	ofstream plik;
-	plik.open(nazwa);
-	if (!plik)
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+	try
 	{
-		cout << "!nie mozna utworzyc pliku!";
+		plik.open(nazwa);
 	}
-	else
-
+	catch (ifstream::failure)
 	{
+		cout << "!nie mozna otworzyc pliku!" << endl;
+		return;
+	}
 #ifdef _DEBUG  
-		cout << "Zapisano dane Samolot" << endl;
+	cout << "Zapisano dane Samolot" << endl;
 #endif
-		plik << *this;
-		plik.close();
-	}
-
+	plik << *this;
+	plik.close();
 }
 
-void Samolot::wczytaj_samolot(string nazwa) {
+void Samolot::wczytaj_samolot(string nazwa) 
+{
 	ifstream plik;
-	plik.open(nazwa);
-	if (!plik)
-		cout << "!nie mozna otworzyc pliku!";
-	else
-	{
+	plik.exceptions(ifstream::failbit | ifstream::badbit);
+		try
+		{
+			plik.open(nazwa);
+		}
+		catch (ifstream::failure)
+		{
+			cout << "!nie mozna otworzyc pliku!" << endl;
+			return;
+		}
 #ifdef _DEBUG  
-		cout << "Wczytano obiekt Samolot" << endl;
+		cout << "Wczytano dane Samolot_wojskowy" << endl;
 #endif
 		plik >> *this;
 		plik.close();
-
-	}
-
 }
 
 void Samolot::wypisz_stan()

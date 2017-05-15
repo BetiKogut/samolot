@@ -209,7 +209,7 @@ int main()
 			cout << endl << "Nowy stan Samolotu wojskowego:" << endl;
 			wojskowy1.wypisz_stan();
 			std::cout << endl << endl << "Proba wczytania z nieistniejacego pliku" << endl;
-			samochod1.wczytaj_samochod("sam.txt");
+			samolot1.wczytaj_samolot("sam.txt");
 
 			break;
 
@@ -231,6 +231,7 @@ int main()
 
 		case 6:
 			system("cls");
+			cout << "[0] Cofnij" << endl;
 			cout << "[1] Test funkcji wypisz_stan" << endl;
 			cout << "[2] Test funkcji ustaw_domyslne" << endl;
 
@@ -251,8 +252,11 @@ int main()
 				}
 
 			} while (opcja < 0 || opcja > 2);
-
-			if(opcja==1)
+			if (opcja == 0)
+			{ 
+				opcja = -1;
+			}
+			else if(opcja==1)
 			{ 
 				for (int i = 0; i < 3; i++)
 				{
@@ -260,13 +264,12 @@ int main()
 				}
 			}
 
-			else
+			else 
 			{ 
 				for (int i = 0; i < 3; i++)
 				{
 					obiekt[i]->ustaw_domyslne();
 				}
-				break;
 			}
 
 			 
